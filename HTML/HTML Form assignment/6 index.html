@@ -1,86 +1,92 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Doctor Appointment Form</title>
-</head>
-<body>
+  </head>
+  <body>
     <center>
-        <h2><b>Doctor Appointment Form</b></h2>
-        <hr color="red" size="2" width="60%">
+      <h2><b>Doctor Appointment Form</b></h2>
+      <hr color="red" size="2" width="60%" />
     </center>
 
     <form>
-        <table align="center" cellpadding="8">
-            
-            <tr>
-                <td rowspan="10" style="vertical-align: top; padding-right: 20px;">
-                    <img src="" alt="Doctor Photo" width="200">
-                </td>
+      <table align="center" cellpadding="8">
+        <tr>
+          <td rowspan="10" style="vertical-align: top; padding-right: 20px">
+            <img src="" alt="Doctor Photo" width="200" />
+          </td>
 
-                <td>Appointment Date</td>
-                <td><input type="date" name="appointment_date"></td>
-            </tr>
+          <td>Appointment Date</td>
+          <td><input type="date" name="appointment_date" /></td>
+        </tr>
 
-            <tr>
-                <td>Appointment Time</td>
-                <td><input type="time" name="appointment_time"></td>
-            </tr>
+        <tr>
+          <td>Appointment Time</td>
+          <td><input type="time" name="appointment_time" /></td>
+        </tr>
 
-            <tr>
-                <td>Name</td>
-                <td>
-                    <input type="text" name="first_name" placeholder="First">
-                    <input type="text" name="last_name" placeholder="Last">
-                </td>
-            </tr>
+        <tr>
+          <td>Name</td>
+          <td>
+            <input type="text" name="first_name" placeholder="First" />
+            <input type="text" name="last_name" placeholder="Last" />
+          </td>
+        </tr>
 
-            <tr>
-                <td>Gender</td>
-                <td>
-                    <input type="radio" name="gender" value="male"> Male
-                    <input type="radio" name="gender" value="female"> Female
-                </td>
-            </tr>
+        <tr>
+          <td>Gender</td>
+          <td>
+            <input type="radio" name="gender" value="male" /> Male
+            <input type="radio" name="gender" value="female" /> Female
+          </td>
+        </tr>
 
-            <tr>
-                <td>Phone</td>
-                <td><input type="tel" name="phone" placeholder="####"></td>
-            </tr>
+        <tr>
+          <td>Phone</td>
+          <td><input type="tel" name="phone" placeholder="####" /></td>
+        </tr>
 
-            <tr>
-                <td>Address</td>
-                <td>
-                    <input type="text" name="city" placeholder="City">
-                    <input type="text" name="state" placeholder="State">
-                </td>
-            </tr>
+        <tr>
+          <td>Address</td>
+          <td>
+            <input type="text" name="city" placeholder="City" />
+            <input type="text" name="state" placeholder="State" />
+          </td>
+        </tr>
 
-            <tr>
-                <td>Your Query</td>
-                <td><textarea name="query" rows="3" cols="30"></textarea></td>
-            </tr>
+        <tr>
+          <td>Your Query</td>
+          <td><textarea name="query" rows="3" cols="30"></textarea></td>
+        </tr>
 
-            <tr>
-                <td>Appointment Type</td>
-                <td>
-                    <p>Select which appointment type(s) you require:</p>
-                    <input type="checkbox" name="type" value="cervix"> Cervix checkup<br>
-                    <input type="checkbox" name="type" value="heart"> Heart checkup<br>
-                    <input type="checkbox" name="type" value="eye"> Eye check-up<br>
-                    <input type="checkbox" name="type" value="hearing"> Hearing Test
-                </td>
-            </tr>
+        <tr>
+          <td>Appointment Type</td>
+          <td>
+            <p>Select which appointment type(s) you require:</p>
+            <input type="checkbox" name="type" value="cervix" /> Cervix
+            checkup<br />
+            <input type="checkbox" name="type" value="heart" /> Heart checkup<br />
+            <input type="checkbox" name="type" value="eye" /> Eye check-up<br />
+            <input type="checkbox" name="type" value="hearing" /> Hearing Test
+          </td>
+        </tr>
 
-            <tr>
-                <td>Appointment Type (Other)</td>
-                <td><input type="text" name="other_type" placeholder="Enter appointment type"></td>
-            </tr>
+        <tr>
+          <td>Appointment Type (Other)</td>
+          <td>
+            <input
+              type="text"
+              name="other_type"
+              placeholder="Enter appointment type"
+            />
+          </td>
+        </tr>
 
-            <tr>
-                <td></td>
-                <td><input type="submit" value="Send"></td>
-            </tr>
-        </table>
+        <tr>
+          <td></td>
+          <td><input type="submit" value="Send" /></td>
+        </tr>
+      </table>
     </form>
-</body>
+  </body>
 </html>
