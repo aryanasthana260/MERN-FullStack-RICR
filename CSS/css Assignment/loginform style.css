@@ -1,0 +1,109 @@
+body {
+  background: url();
+  background-size: cover;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#mainBox {
+  border: 1px solid #dddddd;
+  width: 350px;
+  height: auto;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+
+#formHeading {
+  color: #333333;
+  text-align: left;
+  font-size: 2em;
+  border-bottom: 3px solid #6c63ff;
+  padding-bottom: 5px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+#loginForm {
+  width: 100%;
+  margin: 0;
+}
+
+.formFeild {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.formFeild label {
+  display: none;
+}
+
+.formFeild input {
+  box-sizing: border-box; 
+  width: 100%; 
+  padding: 12px 10px;
+  border-radius: 5px;
+  border: 1px solid #cccccc;
+  outline-color: #6c63ff;
+  font-size: 1em;
+}
+
+#formControl {
+  text-align: center;
+}
+
+#rememberForgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+  font-size: 0.9em;
+}
+
+#rememberForgot input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+#rememberForgot label {
+  display: inline-block;
+  color: #555555;
+}
+
+#forgotPassword {
+  color: #6c63ff;
+  text-decoration: none;
+}
+
+#loginButton {
+  width: 100%;
+  padding: 12px;
+  border-radius: 5px;
+  border: none;
+  background-color: #6c63ff;
+  color: white;
+  font-size: 1.1em;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+#loginButton:hover {
+  background-color: #524ac9;
+  color: white;
+}
+
+#loginButton:active {
+  background-color: #3e38a2;
+  color: white;
+}
+
+#signupLink {
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #555555;
+}
+
+#signupLink a {
+  color: #6c63ff;
+  text-decoration: none;
+}
