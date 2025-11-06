@@ -15,13 +15,11 @@ body {
   background-color: #ffffff;
 }
 
+
 #formHeading {
   color: #333333;
   text-align: left;
   font-size: 2em;
-  border-bottom: 3px solid #6c63ff;
-  padding-bottom: 5px;
-  display: inline-block;
   margin-bottom: 20px;
 }
 
@@ -30,27 +28,18 @@ body {
   margin: 0;
 }
 
-
-
 .formFeild {
   margin-bottom: 15px;
-  
-  
   display: flex;
   align-items: center; 
-  
-  
   border-radius: 5px;
   border: 1px solid #cccccc;
-  
- 
-  padding: 0 10px; 
+  padding: 0 10px;
 }
 
-
 .formFeild .icon {
-  color: #888888; 
-  margin-right: 5px; 
+  color: #888888;
+  margin-right: 5px;
 }
 
 .formFeild label {
@@ -59,29 +48,21 @@ body {
 
 .formFeild input {
   box-sizing: border-box;
-  width: 100%; 
-  padding: 12px 0; 
+  width: 100%;
+  padding: 12px 0;
   font-size: 1em;
-
-  
   border: none;
-  
- 
   outline-color: #6c63ff;
-  
-  
 }
-
-
-
 
 #formControl {
   text-align: center;
 }
 
+
 #rememberForgot {
   display: flex;
-  justify-content: space-between;
+ 
   align-items: center;
   margin: 15px 0;
   font-size: 0.9em;
@@ -95,6 +76,7 @@ body {
   display: inline-block;
   color: #555555;
 }
+
 
 #forgotPassword {
   color: #6c63ff;
