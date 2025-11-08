@@ -1,0 +1,26 @@
+#BigDaddy {
+  border: 1px solid black;
+  width: 700px;
+  height: 700px;
+  background-color: blue;
+}
+
+#mainDiv {
+  display: grid;
+  border: 1px solid black;
+  grid-template-columns: 200px 300px 110px;
+  justify-content: center;
+  align-items: end;
+  width: fit-content;
+  justify-items: center;
+}
+
+.subdiv {
+  border: 1px solid #000;
+  width: 40px;
+  height: 40px;
+  background-color: blueviolet;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}

@@ -1,0 +1,27 @@
+
+
+
+#NavBar
+{
+    color: aliceblue;
+    display: flex;
+    padding: 10px 50px;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+#links
+{
+    display: flex;
+    gap: 20px;
+}
+
+button
+{
+    background-color: red;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+}
