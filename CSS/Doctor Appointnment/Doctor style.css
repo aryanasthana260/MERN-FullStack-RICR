@@ -1,0 +1,26 @@
+#container
+{
+    width: 90%;
+    margin: auto;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+
+}
+
+#docImage
+{
+    height: inherit;
+    
+    img{
+        border: 1px solid black;
+        height: inherit;
+        
+       }
+}
+#Formfeilds
+{
+
+
+}
