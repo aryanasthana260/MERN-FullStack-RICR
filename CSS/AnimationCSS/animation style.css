@@ -1,0 +1,61 @@
+h1 {
+  border: 1px solid #000;
+  border-color: black;
+  width: 90px;
+}
+
+h1:hover {
+  width: 500px;
+  transition: width 5s;
+}
+
+#outer {
+  border: 1px solid #000;
+  height: 50px;
+  width: 500px;
+
+  #inner {
+    width: 0%;
+    height: 50px;
+    background-color: red;
+  }
+}
+
+#outer:hover {
+  #inner {
+    width: 100%;
+    background-color: green;
+    transition: width 5s ease-in-out, background-color 5s ease-in-out;
+  }
+}
+#outer1 {
+  width: 500px;
+  height: 50px;
+  border: 1px solid #000;
+
+  #inner1 {
+    height: 50px;
+  }
+}
+
+#outer1:hover {
+  #inner1 {
+    animation: MyAnimation 5s linear;
+  }
+}
+
+@keyframes MyAnimation {
+  0% {
+    width: 0%;
+    background-color: red;
+  }
+
+  50% {
+    width: 50%;
+    background-color: yellow;
+  }
+  100% {
+    width: 100%;
+    background-color: green;
+  }
+}
