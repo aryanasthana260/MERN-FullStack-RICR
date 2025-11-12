@@ -5,15 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Aryan Asthana's Project</title>
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap"
-      rel="stylesheet"
-    />
-
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="Resume style.css" />
   </head>
   <body>
-    <!-- ===== NAVBAR ===== -->
+    <!-- ===== STICKY NAVBAR ===== -->
     <header class="topbar">
       <div class="container nav-row">
         <div class="brand">Material Tailwind</div>
@@ -33,65 +29,28 @@
 
     <section class="hero">
       <div class="container">
-        <!-- radios control which big image shows -->
-        <input
-          type="radio"
-          name="heroimg"
-          id="img1"
-          class="hero-radio"
-          checked
-        />
-        <input type="radio" name="heroimg" id="img2" class="hero-radio" />
-        <input type="radio" name="heroimg" id="img3" class="hero-radio" />
-
-        <div class="hero-row">
+        <div class="hero-grid">
           <div class="hero-text">
-            <h1 class="hero-title">
-              Welcome to my Web<br />Development Portfolio!
-            </h1>
+            <h1 class="hero-title">Welcome to my Web<br />Development Portfolio!</h1>
             <p class="hero-sub">
               I'm <strong>Aryan Asthana</strong> from Bhopal, India. Here you'll
-              see my work in web development, where creativity meets
-              functionality.
+              see my work in web development, where creativity meets functionality.
             </p>
 
             <label class="label">Your Email below</label>
             <div class="hero-form">
-              <input
-                class="input"
-                type="email"
-                placeholder="Enter your email"
-              />
-              <a class="btn btn-dark" href="#">REQUIRE OFFER</a>
+              <input class="input" type="email" placeholder="Enter your email" />
+              <button class="btn btn-dark" type="button">REQUIRE OFFER</button>
             </div>
 
             <p class="tiny">
               Read my
-              <a href="#" class="link-underline">Terms and Conditions</a>
+              <button type="button" class="link-button">Terms and Conditions</button>
             </p>
-
-            <!-- thumbnails (bottom-left) -->
-            <div class="thumb-chooser">
-              <label for="img1" class="thumb-option">
-                <img src="my image.jpg" alt="thumb 1" />
-              </label>
-              <label for="img2" class="thumb-option">
-                <img src="mobile app development 3.svg" alt="thumb 2" />
-              </label>
-              <label for="img3" class="thumb-option">
-                <img src="ecommerce img.svg" alt="thumb 3" />
-              </label>
-            </div>
           </div>
 
           <div class="hero-image">
-            <img class="big big1" src="my image.jpg" alt="Hero 1" />
-            <img
-              class="big big2"
-              src="mobile app development 3.svg"
-              alt="Hero 2"
-            />
-            <img class="big big3" src="ecommerce img.svg" alt="Hero 3" />
+            <img class="big" src="492a1158-d394-46b4-bd06-b9dbb948c36b.jpg" alt="Hero Photo" />
           </div>
         </div>
       </div>
@@ -112,13 +71,12 @@
       </div>
     </section>
 
+    <!-- ===== SKILLS ===== -->
     <section class="skills-intro">
       <div class="container center">
         <p class="eyebrow">MY SKILLS</p>
         <h2 class="section-title">What I do</h2>
-        <p class="section-sub">
-          I design and build clean, fast and simple websites and apps.
-        </p>
+        <p class="section-sub">I design and build clean, fast and simple websites and apps.</p>
       </div>
     </section>
 
@@ -157,90 +115,74 @@
       </div>
     </section>
 
+    <!-- ===== PROJECTS ===== -->
     <section class="projects">
       <div class="container">
         <h2 class="section-title center">My Projects</h2>
-        <p class="section-sub center">
-          A few examples of my work and practice projects.
-        </p>
+        <p class="section-sub center">A few examples of my work and practice projects.</p>
 
         <div class="grid-4">
           <!-- 1 -->
           <article class="card">
-            <div class="thumb">
-              <img src="mobile app dev;opment img.svg" alt="" />
-            </div>
+            <div class="thumb"><img src="mobile app dev;opment img.svg" alt=""></div>
             <h3 class="card-title">Mobile App Development</h3>
-            <p class="card-text">
-              Helps users find local restaurants and cuisines.
-            </p>
-            <a class="btn btn-dark card-btn" href="#">SEE DETAILS</a>
+            <p class="card-text">Helps users find local restaurants and cuisines.</p>
+            <button class="btn btn-dark card-btn" type="button">SEE DETAILS</button>
           </article>
           <!-- 2 -->
           <article class="card">
-            <div class="thumb">
-              <img src="landing page development img.svg" alt="" />
-            </div>
+            <div class="thumb"><img src="landing page development img.svg" alt=""></div>
             <h3 class="card-title">Landing Page Development</h3>
             <p class="card-text">Promo page for a fitness brand campaign.</p>
-            <a class="btn btn-dark card-btn" href="#">SEE DETAILS</a>
+            <button class="btn btn-dark card-btn" type="button">SEE DETAILS</button>
           </article>
           <!-- 3 -->
           <article class="card">
-            <div class="thumb">
-              <img src="mobile app development 3.svg" alt="" />
-            </div>
+            <div class="thumb"><img src="mobile app development 3.svg" alt=""></div>
             <h3 class="card-title">Mobile App Development</h3>
             <p class="card-text">Another food discovery app concept.</p>
-            <a class="btn btn-dark card-btn" href="#">SEE DETAILS</a>
+            <button class="btn btn-dark card-btn" type="button">SEE DETAILS</button>
           </article>
           <!-- 4 -->
           <article class="card">
-            <div class="thumb"><img src="ecommerce img.svg" alt="" /></div>
+            <div class="thumb"><img src="ecommerce img.svg" alt=""></div>
             <h3 class="card-title">E-commerce Development</h3>
             <p class="card-text">Shop layout with modern product cards.</p>
-            <a class="btn btn-dark card-btn" href="#">SEE DETAILS</a>
+            <button class="btn btn-dark card-btn" type="button">SEE DETAILS</button>
           </article>
-
-          <!-- extra 4 -->
           <!-- 5 -->
           <article class="card">
-            <div class="thumb">
-              <img src="mobile app dev;opment img.svg" alt="" />
-            </div>
+            <div class="thumb"><img src="mobile app dev;opment img.svg" alt=""></div>
             <h3 class="card-title">Analytics Dashboard</h3>
             <p class="card-text">Simple charts and filters for reports.</p>
-            <a class="btn btn-dark card-btn" href="#">SEE DETAILS</a>
+            <button class="btn btn-dark card-btn" type="button">SEE DETAILS</button>
           </article>
           <!-- 6 -->
           <article class="card">
-            <div class="thumb">
-              <img src="landing page development img.svg" alt="" />
-            </div>
+            <div class="thumb"><img src="landing page development img.svg" alt=""></div>
             <h3 class="card-title">Blog Platform UI</h3>
             <p class="card-text">Posts, tags and author cards.</p>
-            <a class="btn btn-dark card-btn" href="#">SEE DETAILS</a>
+            <button class="btn btn-dark card-btn" type="button">SEE DETAILS</button>
           </article>
           <!-- 7 -->
           <article class="card">
-            <div class="thumb">
-              <img src="mobile app development 3.svg" alt="" />
-            </div>
+            <div class="thumb"><img src="mobile app development 3.svg" alt=""></div>
             <h3 class="card-title">Portfolio Website</h3>
             <p class="card-text">Projects grid and contact form.</p>
-            <a class="btn btn-dark card-btn" href="#">SEE DETAILS</a>
+            <button class="btn btn-dark card-btn" type="button">SEE DETAILS</button>
           </article>
           <!-- 8 -->
           <article class="card">
-            <div class="thumb"><img src="ecommerce img.svg" alt="" /></div>
+            <div class="thumb"><img src="ecommerce img.svg" alt=""></div>
             <h3 class="card-title">SaaS Marketing Site</h3>
             <p class="card-text">Pricing, features and a CTA section.</p>
-            <a class="btn btn-dark card-btn" href="#">SEE DETAILS</a>
+            <button class="btn btn-dark card-btn" type="button">SEE DETAILS</button>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- ===== RESUME ===== -->
     <section class="resume">
       <div class="container resume-row">
         <div class="resume-left">
@@ -250,18 +192,12 @@
             experience in crafting visually stunning and functionally robust
             websites and web applications.
           </p>
-          <a class="link-strong" href="#">VIEW MORE →</a>
+          <button class="btn-link" type="button">VIEW MORE →</button>
         </div>
         <div class="resume-right">
-          <div class="badge">
-            <span class="dot">▮▮▮</span> Bachelor of Science in Computer Science
-          </div>
-          <div class="badge">
-            <span class="dot">▦</span> Certified Web Developer
-          </div>
-          <div class="badge">
-            <span class="dot">✶</span> Frontend Framework Certification
-          </div>
+          <div class="badge"><span class="dot">▮▮▮</span> Bachelor of Science in Computer Science</div>
+          <div class="badge"><span class="dot">▦</span> Certified Web Developer</div>
+          <div class="badge"><span class="dot">✶</span> Frontend Framework Certification</div>
         </div>
       </div>
     </section>
@@ -270,68 +206,39 @@
     <section class="clients-say">
       <div class="container center">
         <h2 class="section-title">What Clients Say</h2>
-        <p class="section-sub">
-          Here’s what people I’ve worked with think about my work.
-        </p>
+        <p class="section-sub">Here’s what people I’ve worked with think about my work.</p>
       </div>
     </section>
 
-    <!-- ===== TESTIMONIAL (CSS-only image switch) ===== -->
+    <!-- ===== TESTIMONIAL (thumbs show hover only) ===== -->
     <section class="testimonial">
       <div class="container">
-        <!-- radios control which big portrait shows -->
-        <input
-          type="radio"
-          name="testiimg"
-          id="t1"
-          class="testi-radio"
-          checked
-        />
-        <input type="radio" name="testiimg" id="t2" class="testi-radio" />
-        <input type="radio" name="testiimg" id="t3" class="testi-radio" />
-
-        <div class="testi-row">
+        <div class="testi-grid">
           <div class="testi-text">
             <h3 class="testi-title">Mobile App Development</h3>
             <p class="testi-body">
               I had the pleasure of working with Aryan on a web project. His
-              attention to detail and dedication and his ability to use hiss
-              mind was impressive.
+              attention to detail and dedication was impressive.
             </p>
             <p class="testi-author">
-              <strong>Michael – Technical Manager</strong><br />Marketing @
-              APPLE INC.
+              <strong>Michael – Technical Manager</strong><br />Marketing @ APPLE INC.
             </p>
 
             <div class="testi-chooser">
-              <label for="t1" class="testi-thumb">
-                <img src="avatar3.jpg" alt="img 1" />
-              </label>
-              <label for="t2" class="testi-thumb">
-                <img src="image-7.svg" alt="img 2" />
-              </label>
-              <label for="t3" class="testi-thumb">
-                <img
-                  src="https://picsum.photos/seed/face3/900/900"
-                  alt="img 3"
-                />
-              </label>
+              <div class="testi-thumb"><img src="avatar3.jpg" alt="img 1" /></div>
+              <div class="testi-thumb"><img src="image-7.svg" alt="img 2" /></div>
+              <div class="testi-thumb"><img src="https://picsum.photos/seed/face3/900/900" alt="img 3" /></div>
             </div>
           </div>
 
           <div class="testi-image">
-            <img class="tbig tbig1" src="avatar3.jpg" alt="Big 1" />
-            <img class="tbig tbig2" src="image-7.svg" alt="Big 2" />
-            <img
-              class="tbig tbig3"
-              src="https://picsum.photos/seed/face3/900/900"
-              alt="Big 3"
-            />
+            <img class="tbig" src="avatar3.jpg" alt="Big Portrait" />
           </div>
         </div>
       </div>
     </section>
 
+    <!-- ===== CLIENTS CTA ===== -->
     <section class="clients-cta">
       <div class="container">
         <p class="eyebrow center">POPULAR CLIENTS</p>
@@ -347,13 +254,12 @@
       </div>
     </section>
 
+    <!-- ===== CONTACT ===== -->
     <section class="contact">
       <div class="container contact-wrap">
         <div class="contact-left">
           <h3 class="contact-title">Contact Information</h3>
-          <p class="contact-sub">
-            Fill up the form and I’ll get back to you soon.
-          </p>
+          <p class="contact-sub">Fill up the form and I’ll get back to you soon.</p>
           <ul class="contact-list">
             <li>📞 +91 76104 94410</li>
             <li>✉️ Aryanasthana260@gmail.com</li>
