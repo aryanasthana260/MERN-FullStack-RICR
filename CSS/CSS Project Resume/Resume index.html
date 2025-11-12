@@ -1,333 +1,415 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Web Dev Portfolio</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aryan Asthana's Project</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="Resume style.css" />
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+   
+    <link rel="stylesheet" href="Resume style.css" />
+  </head>
+  <body>
+    <!-- ===== NAVBAR ===== -->
+    <header class="topbar">
+      <div class="container nav-row">
+        <div class="brand">Material Tailwind</div>
 
-  <!-- ===== STICKY NAVBAR ===== -->
-  <header class="nav sticky">
-    <div class="container nav-row">
-      <div class="brand">Material Tailwind</div>
-
-      <nav class="menu">
-        <a href="#pages" class="menu-item">Page</a>
-        <a href="#account" class="menu-item">Account</a>
-        <a href="#docs" class="menu-item">Docs</a>
-      </nav>
-
-      <div class="nav-right">
-        <a href="#signin" class="link">SIGN IN</a>
-        <a href="#blocks" class="btn btn-dark">BLOCKS</a>
-      </div>
-    </div>
-  </header>
-
-  <!-- ===== HERO ===== -->
-  <section class="hero" id="pages">
-    <div class="container hero-row">
-      <div class="hero-text">
-        <h1 class="hero-title">Welcome to my Web<br/>Development Portofolio!</h1>
-        <p class="hero-sub">
-          I'M Aryan Asthana, a passionate web developer based in INDIA,Bhopal.
-          Here, you'll get a glimpse of my journey in the world of web
-          development, where creativity meets functionality.
-        </p>
-
-        <label class="label">aryanasthhana260@gmail.com</label>
-        <div class="hero-form">
-          <input class="input" type="email" placeholder="Enter your email" />
-          <a class="btn btn-dark" href="#">REQUIRE OFFER</a>
-        </div>
-
-        <p class="tiny">Read my <a href="#" class="link-underline">Terms and Conditions</a></p>
-      </div>
-
-      <!-- Put your image at assets/hero.jpg or change src -->
-      <div class="hero-image">
-        <img id="hero-img" src="image-7.svg" alt="Hero Photo" />
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== CLIENTS ROW (SVG images) ===== -->
-  <section class="clients">
-    <div class="container">
-      <p class="eyebrow center">My awesome clients</p>
-      <div class="logo-row imgs">
-        <img class="client-logo" src="logo-coinbase.svg" alt="Coinbase">
-        <img class="client-logo" src="logo-spotify.svg" alt="Spotify">
-        <img class="client-logo" src="logo-pinterest.svg" alt="Pinterest">
-        <img class="client-logo" src="logo-google.svg" alt="Google">
-        <img class="client-logo" src="logo-amazon.svg" alt="Amazon">
-        <img class="client-logo" src="logo-netflix.svg" alt="Netflix">
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== SKILLS INTRO ===== -->
-  <section class="skills-intro">
-    <div class="container">
-      <p class="eyebrow">MY SKILLS</p>
-      <h2 class="section-title center">What I do</h2>
-      <p class="section-sub center">
-        I'm not just a developer; I'm a digital dreamweaver. Crafting immersive online experiences is not just a job but my calling.
-        Discover below how I can help you.
-      </p>
-    </div>
-  </section>
-
-  <!-- ===== SKILLS GRID ===== -->
-  <section class="skills-grid" id="account">
-    <div class="container grid-3">
-      <div class="skill">
-        <div class="icon-dot">◼</div>
-        <h3>Frontend Web Development:</h3>
-        <p>Creating beautiful and functional web experiences is my forte. Using the latest technologies and best practices, I design and build websites that captivate and engage users.</p>
-      </div>
-      <div class="skill">
-        <div class="icon-dot">⌖</div>
-        <h3>Mobile App Development</h3>
-        <p>I specialize in creating responsive and intuitive mobile apps that work seamlessly across iOS & Android devices. From concept to deployment, I handle every stage of the development process.</p>
-      </div>
-      <div class="skill">
-        <div class="icon-dot">▮▮</div>
-        <h3>Technology Stack</h3>
-        <p>I'm well-versed in HTML5, CSS3, JavaScript, and frameworks like React and React Native.</p>
-      </div>
-      <div class="skill">
-        <div class="icon-dot">#</div>
-        <h3>Web Optimization</h3>
-        <p>Performance matters. I optimize websites and apps for speed, ensuring your users enjoy a fast and responsive experience, which boosts satisfaction and SEO.</p>
-      </div>
-      <div class="skill">
-        <div class="icon-dot">●</div>
-        <h3>User-Centric Design</h3>
-        <p>My development goes hand-in-hand with an eye for design. I create interfaces that are functional and aesthetically pleasing.</p>
-      </div>
-      <div class="skill">
-        <div class="icon-dot">▣</div>
-        <h3>Testing and Quality Assurance</h3>
-        <p>I rigorously test and debug to guarantee a secure, bug-free environment. Your peace of mind matters as much as functionality.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== PROJECTS HEAD ===== -->
-  <section class="projects-head" id="docs">
-    <div class="container">
-      <h2 class="section-title center">My Projects</h2>
-      <p class="section-sub center">
-        Whether you have a mobile app idea that needs to come to life or a website that requires a facelift,
-        I'm here to turn your digital dreams into reality.
-      </p>
-    </div>
-  </section>
-
-  <!-- ===== PROJECTS GRID (8 cards with aligned buttons) ===== -->
-  <section class="projects">
-    <div class="container grid-4">
-      <!-- Card 1 -->
-      <article class="card">
-        <div class="thumb"><img src="https://picsum.photos/seed/app1/640/360" alt=""></div>
-        <h3 class="card-title">Mobile App Development</h3>
-        <p class="card-text">Mobile app designed to help users discover and explore local restaurants and cuisines.</p>
-        <a class="btn btn-dark card-btn" href="#">SEE DETAILS</a>
-      </article>
-      <!-- Card 2 -->
-      <article class="card">
-        <div class="thumb"><img src="https://picsum.photos/seed/landing/640/360" alt=""></div>
-        <h3 class="card-title">Landing Page Development</h3>
-        <p class="card-text">Promotional landing page for a fitness website Summer Campaign. Form development included.</p>
-        <a class="btn btn-dark card-btn" href="#">SEE DETAILS</a>
-      </article>
-      <!-- Card 3 -->
-      <article class="card">
-        <div class="thumb"><img src="https://picsum.photos/seed/app2/640/360" alt=""></div>
-        <h3 class="card-title">Mobile App Development</h3>
-        <p class="card-text">Mobile app designed to help users discover and explore local restaurants and cuisines.</p>
-        <a class="btn btn-dark card-btn" href="#">SEE DETAILS</a>
-      </article>
-      <!-- Card 4 -->
-      <article class="card">
-        <div class="thumb"><img src="https://picsum.photos/seed/ecom/640/360" alt=""></div>
-        <h3 class="card-title">E-commerce development</h3>
-        <p class="card-text">Ecommerce website offering access to the latest and greatest gadgets and accessories.</p>
-        <a class="btn btn-dark card-btn" href="#">SEE DETAILS</a>
-      </article>
-      <!-- Card 5 -->
-      <article class="card">
-        <div class="thumb"><img src="https://picsum.photos/seed/analytics/640/360" alt=""></div>
-        <h3 class="card-title">Analytics Dashboard</h3>
-        <p class="card-text">Clean admin dashboard with charts, filters, and export-ready reports for stakeholders.</p>
-        <a class="btn btn-dark card-btn" href="#">SEE DETAILS</a>
-      </article>
-      <!-- Card 6 -->
-      <article class="card">
-        <div class="thumb"><img src="https://picsum.photos/seed/blog/640/360" alt=""></div>
-        <h3 class="card-title">Blog Platform UI</h3>
-        <p class="card-text">Modern blog interface with categories, tags, reading progress, and author profiles.</p>
-        <a class="btn btn-dark card-btn" href="#">SEE DETAILS</a>
-      </article>
-      <!-- Card 7 -->
-      <article class="card">
-        <div class="thumb"><img src="https://picsum.photos/seed/portfolio/640/360" alt=""></div>
-        <h3 class="card-title">Portfolio Website</h3>
-        <p class="card-text">Personal portfolio with projects grid, testimonials, and contact form styling.</p>
-        <a class="btn btn-dark card-btn" href="#">SEE DETAILS</a>
-      </article>
-      <!-- Card 8 -->
-      <article class="card">
-        <div class="thumb"><img src="https://picsum.photos/seed/saas/640/360" alt=""></div>
-        <h3 class="card-title">SaaS Marketing Site</h3>
-        <p class="card-text">Product marketing site with pricing cards, feature highlights, and CTA sections.</p>
-        <a class="btn btn-dark card-btn" href="#">SEE DETAILS</a>
-      </article>
-    </div>
-  </section>
-
-  <!-- ===== RESUME ===== -->
-  <section class="resume">
-    <div class="container resume-row">
-      <div class="resume-left">
-        <h2 class="section-title">My Resume</h2>
-        <p class="section-sub left">
-          Highly skilled and creative Web Developer with 5+ years of experience
-          in crafting visually stunning and functionally robust websites and web applications.
-        </p>
-        <a class="link-strong" href="#">VIEW MORE →</a>
-      </div>
-      <div class="resume-right">
-        <div class="badge"><span class="dot">▮▮▮</span> Bachelor of Science in Computer Science</div>
-        <div class="badge"><span class="dot">▦</span> Certified Web Developer</div>
-        <div class="badge"><span class="dot">✶</span> Frontend Framework Proficiency Certification</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== WHAT CLIENTS SAY (NEW HEADING BLOCK) ===== -->
-  <section class="clients-say">
-    <div class="container">
-      <h2 class="section-title center">What Clients Say</h2>
-      <p class="section-sub center">
-        Discover what clients have to say about their experiences working with me.
-        My client's satisfaction is my greatest achievement!
-      </p>
-    </div>
-  </section>
-
-  <!-- ===== TESTIMONIAL ===== -->
-  <section class="testimonial">
-    <div class="container testi-row">
-      <div class="testi-text">
-        <h3 class="testi-title">Mobile App<br/>Development</h3>
-        <p class="testi-body">
-          I had the pleasure of working with Lily on a critical web development project,
-          and I can confidently say that their expertise and professionalism exceeded my expectations.
-        </p>
-        <p class="testi-author"><strong>Michael – Technical Manager</strong><br/>Marketing @ APPLE INC.</p>
-
-        <div class="avatars">
-          <img src="https://picsum.photos/seed/a1/56/56" alt="">
-          <img src="https://picsum.photos/seed/a2/56/56" alt="">
-          <img src="https://picsum.photos/seed/a3/56/56" alt="">
-        </div>
-      </div>
-      <div class="testi-image">
-        <img src="https://picsum.photos/seed/will/520/560" alt="">
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== CLIENTS CTA (ALL GREYED) ===== -->
-  <section class="clients-cta">
-    <div class="container">
-      <p class="eyebrow center">POPULAR CLIENTS</p>
-      <h2 class="section-title center">Trusted by over 10,000+<br/>clients</h2>
-      <div class="logo-row imgs faded">
-        <img class="client-logo" src="logo-coinbase.svg" alt="Coinbase">
-        <img class="client-logo" src="logo-spotify.svg" alt="Spotify">
-        <img class="client-logo" src="logo-pinterest.svg" alt="Pinterest">
-        <img class="client-logo" src="logo-google.svg" alt="Google">
-        <img class="client-logo" src="logo-amazon.svg" alt="Amazon">
-        <img class="client-logo" src="logo-netflix.svg" alt="Netflix">
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== CONTACT ===== -->
-  <section class="contact">
-    <div class="container contact-wrap">
-      <div class="contact-left">
-        <h3 class="contact-title">Contact Information</h3>
-        <p class="contact-sub">Fill up the form and our Team will get back to you within 24 hours.</p>
-
-        <ul class="contact-list">
-          <li>📞 +91 76104 94410</li>
-          <li>✉️ Aryanasthana260@gmail.com</li>
-          <li>🎟️ Open Support Ticket</li>
-        </ul>
-      </div>
-
-      <form class="contact-form">
-        <div class="row-2">
-          <div class="field">
-            <label>First Name</label>
-            <input type="text" placeholder="eg. Lucas" />
-          </div>
-          <div class="field">
-            <label>Last Name</label>
-            <input type="text" placeholder="eg. Jones" />
-          </div>
-        </div>
-
-        <div class="field">
-          <label>Email</label>
-          <input type="email" placeholder="eg. lucas@mail.com" />
-        </div>
-
-        <div class="radio-group">
-          <label class="radio-label">What are you interested on?</label>
-          <div class="radios">
-            <label><input type="radio" name="interest" checked /> Design</label>
-            <label><input type="radio" name="interest" /> Development</label>
-            <label><input type="radio" name="interest" /> Support</label>
-            <label><input type="radio" name="interest" /> Other</label>
-          </div>
-        </div>
-
-        <div class="field">
-          <label>Your Message</label>
-          <textarea rows="5"></textarea>
-        </div>
+        <nav class="menu">
+          <span class="nav-item">Page</span>
+          <span class="nav-item">Account</span>
+          <span class="nav-item">Docs</span>
+        </nav>
 
         <div class="right">
-          <button class="btn btn-dark" type="button">SEND MESSAGE</button>
+          <button type="button" class="btn btn-outline">SIGN IN</button>
+          <button type="button" class="btn btn-dark">BLOCKS</button>
         </div>
-      </form>
-    </div>
-  </section>
+      </div>
+    </header>
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="footer">
-    <div class="container foot-row">
-      <div class="copy">© 2025 Made with My Own hands by Aryan Asthana. Distributed by AryanAsthana</div>
+   
+    <section class="hero">
+      <div class="container">
+        <!-- radios control which big image shows -->
+        <input
+          type="radio"
+          name="heroimg"
+          id="img1"
+          class="hero-radio"
+          checked
+        />
+        <input type="radio" name="heroimg" id="img2" class="hero-radio" />
+        <input type="radio" name="heroimg" id="img3" class="hero-radio" />
 
-      <nav class="foot-menu">
-        <a href="#">Home</a>
-        <a href="#">About Us</a>
-        <a href="#">Blog</a>
-        <a href="#">Service</a>
-      </nav>
+        <div class="hero-row">
+          <div class="hero-text">
+            <h1 class="hero-title">
+              Welcome to my Web<br />Development Portfolio!
+            </h1>
+            <p class="hero-sub">
+              I'm <strong>Aryan Asthana</strong> from Bhopal, India. Here you'll
+              see my work in web development, where creativity meets
+              functionality.
+            </p>
 
-      <a href="#" class="btn btn-dark">SUBSCRIBE</a>
-    </div>
-  </footer>
+            <label class="label">Your Email below</label>
+            <div class="hero-form">
+              <input
+                class="input"
+                type="email"
+                placeholder="Enter your email"
+              />
+              <a class="btn btn-dark" href="#">REQUIRE OFFER</a>
+            </div>
 
-</body>
+            <p class="tiny">
+              Read my
+              <a href="#" class="link-underline">Terms and Conditions</a>
+            </p>
+
+            <!-- thumbnails (bottom-left) -->
+            <div class="thumb-chooser">
+              <label for="img1" class="thumb-option">
+                <img src="my image.jpg" alt="thumb 1" />
+              </label>
+              <label for="img2" class="thumb-option">
+                <img src="mobile app development 3.svg" alt="thumb 2" />
+              </label>
+              <label for="img3" class="thumb-option">
+                <img src="ecommerce img.svg" alt="thumb 3" />
+              </label>
+            </div>
+          </div>
+
+          <div class="hero-image">
+            <!-- three big imgs;  -->
+            <img class="big big1" src="my image.jpg" alt="Hero 1" />
+            <img
+              class="big big2"
+              src="mobile app development 3.svg"
+              alt="Hero 2"
+            />
+            <img class="big big3" src="ecommerce img.svg" alt="Hero 3" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CLIENTS ===== -->
+    <section class="clients">
+      <div class="container">
+        <p class="eyebrow center">My awesome clients</p>
+        <div class="logo-row">
+          <img class="client-logo" src="logo-coinbase.svg" alt="Coinbase" />
+          <img class="client-logo" src="logo-spotify.svg" alt="Spotify" />
+          <img class="client-logo" src="logo-pinterest.svg" alt="Pinterest" />
+          <img class="client-logo" src="logo-google.svg" alt="Google" />
+          <img class="client-logo" src="logo-amazon.svg" alt="Amazon" />
+          <img class="client-logo" src="logo-netflix.svg" alt="Netflix" />
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="skills-intro">
+      <div class="container center">
+        <p class="eyebrow">MY SKILLS</p>
+        <h2 class="section-title">What I do</h2>
+        <p class="section-sub">
+          I design and build clean, fast and simple websites and apps.
+        </p>
+      </div>
+    </section>
+
+   
+    <section class="skills-grid">
+      <div class="container grid-3">
+        <div class="skill">
+          <div class="icon-dot">◼</div>
+          <h3>Frontend Web Development</h3>
+          <p>Responsive, accessible pages with HTML, CSS and JS.</p>
+        </div>
+        <div class="skill">
+          <div class="icon-dot">⌖</div>
+          <h3>Mobile App Development</h3>
+          <p>Mobile-friendly UIs and basic hybrid app layouts.</p>
+        </div>
+        <div class="skill">
+          <div class="icon-dot">▮▮</div>
+          <h3>Technology Stack</h3>
+          <p>HTML5, CSS3, JavaScript, and starter React.</p>
+        </div>
+        <div class="skill">
+          <div class="icon-dot">#</div>
+          <h3>Optimization</h3>
+          <p>Speed tweaks and basic SEO improvements.</p>
+        </div>
+        <div class="skill">
+          <div class="icon-dot">●</div>
+          <h3>User-Centric Design</h3>
+          <p>Simple layouts with clear text and spacing.</p>
+        </div>
+        <div class="skill">
+          <div class="icon-dot">▣</div>
+          <h3>Testing</h3>
+          <p>Checks, fixes and small polish passes.</p>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="projects">
+      <div class="container">
+        <h2 class="section-title center">My Projects</h2>
+        <p class="section-sub center">
+          A few examples of my work and practice projects.
+        </p>
+
+        <div class="grid-4">
+          <!-- 1 -->
+          <article class="card">
+            <div class="thumb">
+              <img src="mobile app dev;opment img.svg" alt="" />
+            </div>
+            <h3 class="card-title">Mobile App Development</h3>
+            <p class="card-text">
+              Helps users find local restaurants and cuisines.
+            </p>
+            <a class="btn btn-dark card-btn" href="#">SEE DETAILS</a>
+          </article>
+          <!-- 2 -->
+          <article class="card">
+            <div class="thumb">
+              <img src="landing page development img.svg" alt="" />
+            </div>
+            <h3 class="card-title">Landing Page Development</h3>
+            <p class="card-text">Promo page for a fitness brand campaign.</p>
+            <a class="btn btn-dark card-btn" href="#">SEE DETAILS</a>
+          </article>
+          <!-- 3 -->
+          <article class="card">
+            <div class="thumb">
+              <img src="mobile app development 3.svg" alt="" />
+            </div>
+            <h3 class="card-title">Mobile App Development</h3>
+            <p class="card-text">Another food discovery app concept.</p>
+            <a class="btn btn-dark card-btn" href="#">SEE DETAILS</a>
+          </article>
+          <!-- 4 -->
+          <article class="card">
+            <div class="thumb"><img src="ecommerce img.svg" alt="" /></div>
+            <h3 class="card-title">E-commerce Development</h3>
+            <p class="card-text">Shop layout with modern product cards.</p>
+            <a class="btn btn-dark card-btn" href="#">SEE DETAILS</a>
+          </article>
+
+          <!-- extra 4 -->
+          <!-- 5 -->
+          <article class="card">
+            <div class="thumb">
+              <img src="mobile app dev;opment img.svg" alt="" />
+            </div>
+            <h3 class="card-title">Analytics Dashboard</h3>
+            <p class="card-text">Simple charts and filters for reports.</p>
+            <a class="btn btn-dark card-btn" href="#">SEE DETAILS</a>
+          </article>
+          <!-- 6 -->
+          <article class="card">
+            <div class="thumb">
+              <img src="landing page development img.svg" alt="" />
+            </div>
+            <h3 class="card-title">Blog Platform UI</h3>
+            <p class="card-text">Posts, tags and author cards.</p>
+            <a class="btn btn-dark card-btn" href="#">SEE DETAILS</a>
+          </article>
+          <!-- 7 -->
+          <article class="card">
+            <div class="thumb">
+              <img src="mobile app development 3.svg" alt="" />
+            </div>
+            <h3 class="card-title">Portfolio Website</h3>
+            <p class="card-text">Projects grid and contact form.</p>
+            <a class="btn btn-dark card-btn" href="#">SEE DETAILS</a>
+          </article>
+          <!-- 8 -->
+          <article class="card">
+            <div class="thumb"><img src="ecommerce img.svg" alt="" /></div>
+            <h3 class="card-title">SaaS Marketing Site</h3>
+            <p class="card-text">Pricing, features and a CTA section.</p>
+            <a class="btn btn-dark card-btn" href="#">SEE DETAILS</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+   
+    <section class="resume">
+      <div class="container resume-row">
+        <div class="resume-left">
+          <h2 class="section-title">My Resume</h2>
+          <p class="section-sub">
+            Highly skilled and creative Web Developer with 5+ years of
+            experience in crafting visually stunning and functionally robust
+            websites and web applications.
+          </p>
+          <a class="link-strong" href="#">VIEW MORE →</a>
+        </div>
+        <div class="resume-right">
+          <div class="badge">
+            <span class="dot">▮▮▮</span> Bachelor of Science in Computer Science
+          </div>
+          <div class="badge">
+            <span class="dot">▦</span> Certified Web Developer
+          </div>
+          <div class="badge">
+            <span class="dot">✶</span> Frontend Framework Certification
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WHAT CLIENTS SAY ===== -->
+    <section class="clients-say">
+      <div class="container center">
+        <h2 class="section-title">What Clients Say</h2>
+        <p class="section-sub">
+          Here’s what people I’ve worked with think about my work.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIAL (CSS-only image switch) ===== -->
+    <section class="testimonial">
+      <div class="container">
+        <!-- radios control which big portrait shows -->
+        <input
+          type="radio"
+          name="testiimg"
+          id="t1"
+          class="testi-radio"
+          checked
+        />
+        <input type="radio" name="testiimg" id="t2" class="testi-radio" />
+        <input type="radio" name="testiimg" id="t3" class="testi-radio" />
+
+        <div class="testi-row">
+          <div class="testi-text">
+            <h3 class="testi-title">Mobile App Development</h3>
+            <p class="testi-body">
+              I had the pleasure of working with Aryan on a web project. His
+              attention to detail and dedication and his ability to use hiss mind was impressive.
+            </p>
+            <p class="testi-author">
+              <strong>Michael – Technical Manager</strong><br />Marketing @
+              APPLE INC.
+            </p>
+
+            
+            <div class="testi-chooser">
+              <label for="t1" class="testi-thumb">
+                <img src="avatar3.jpg" alt="img 1" />
+              </label>
+              <label for="t2" class="testi-thumb">
+                <img
+                  src="image-7.svg"
+                  alt="img 2"
+                />
+              </label>
+              <label for="t3" class="testi-thumb">
+                <img
+                  src="https://picsum.photos/seed/face3/900/900"
+                  alt="img 3"
+                />
+              </label>
+            </div>
+          </div>
+
+          <div class="testi-image">
+            <img class="tbig tbig1" src="avatar3.jpg" alt="Big 1" />
+            <img
+              class="tbig tbig2"
+              src="image-7.svg"
+              alt="Big 2"
+            />
+            <img
+              class="tbig tbig3"
+              src="https://picsum.photos/seed/face3/900/900"
+              alt="Big 3"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+   
+    <section class="clients-cta">
+      <div class="container">
+        <p class="eyebrow center">POPULAR CLIENTS</p>
+        <h2 class="section-title center">Trusted by over 10,000+ clients</h2>
+        <div class="logo-row faded">
+          <img class="client-logo" src="logo-coinbase.svg" alt="Coinbase" />
+          <img class="client-logo" src="logo-spotify.svg" alt="Spotify" />
+          <img class="client-logo" src="logo-pinterest.svg" alt="Pinterest" />
+          <img class="client-logo" src="logo-google.svg" alt="Google" />
+          <img class="client-logo" src="logo-amazon.svg" alt="Amazon" />
+          <img class="client-logo" src="logo-netflix.svg" alt="Netflix" />
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="contact">
+      <div class="container contact-wrap">
+        <div class="contact-left">
+          <h3 class="contact-title">Contact Information</h3>
+          <p class="contact-sub">
+            Fill up the form and I’ll get back to you soon.
+          </p>
+          <ul class="contact-list">
+            <li>📞 +91 76104 94410</li>
+            <li>✉️ Aryanasthana260@gmail.com</li>
+            <li>🎟️ Open Support Ticket</li>
+          </ul>
+        </div>
+
+        <form class="contact-form">
+          <div class="row-2">
+            <div class="field">
+              <label>First Name</label>
+              <input type="text" placeholder="eg. Lucas" />
+            </div>
+            <div class="field">
+              <label>Last Name</label>
+              <input type="text" placeholder="eg. Jones" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Email</label>
+            <input type="email" placeholder="eg. lucas@mail.com" />
+          </div>
+
+          <div class="field">
+            <label>Your Message</label>
+            <textarea rows="5"></textarea>
+          </div>
+
+          <div class="right">
+            <button class="btn btn-dark" type="button">SEND MESSAGE</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    
+    <footer class="footer">
+      <div class="container foot-row">
+        <div class="copy">© 2025 — Made by Aryan Asthana</div>
+      </div>
+    </footer>
+  </body>
 </html>
