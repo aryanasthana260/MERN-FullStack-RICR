@@ -20,8 +20,8 @@ a{text-decoration:none;color:inherit}
 .btn:active{transform:translateY(1px)}
 
 /* -------- Banner-big images -------- */
-.hero{padding:60px 0}
-.hero-radio{position:absolute;left:-9999px} /* hide radios */
+.hero{padding:100px 0}
+.hero-radio{position:absolute;left:-9999px} 
 .hero-row{display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap}
 .hero-text{flex:1 1 520px}
 .hero-title{font-size:40px;line-height:1.2;margin-bottom:10px}
