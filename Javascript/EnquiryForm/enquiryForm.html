@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enquiry Form</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      body {
+        background-color: #e9f7ff;
+      }
+
+      .form-section {
+        background-color: #e9f7ff;
+        border-radius: 20px;
+        padding: 50px;
+        max-width: 900px;
+        margin: auto;
+      }
+
+      .form-control,
+      .form-select {
+        padding: 12px;
+        font-size: 16px;
+        border-radius: 10px;
+
+        /* CHANGE BORDER COLOR HERE */
+        border: 1px solid #b9c8d3; /* lighter border */
+      }
+
+      label {
+        font-weight: 600;
+      }
+
+      .submit-btn {
+        background-color: #0d1b2a;
+        color: white;
+        padding: 12px 40px;
+        border-radius: 40px;
+        font-size: 18px;
+        border: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="form-section my-5 shadow">
+      <h1 class="text-center fw-bold">Enquiry Form</h1>
+      <p class="text-center mb-4">
+        Have questions or need assistance? Fill out the form below to connect
+        with our team and explore your opportunities.
+      </p>
+
+      <form>
+        <!-- Row 1 -->
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label class="form-label">Person Name*</label>
+            <input type="text" class="form-control" placeholder="Person Name" />
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Contact Number*</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Contact Number"
+            />
+          </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label class="form-label">Email*</label>
+            <input type="email" class="form-control" placeholder="Email" />
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Qualification*</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Qualification"
+            />
+          </div>
+        </div>
+
+        <!-- College -->
+        <div class="mb-3">
+          <label class="form-label">College/School Name*</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="College/School Name"
+          />
+        </div>
+
+        <!-- Row 3 -->
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label class="form-label">Year*</label>
+            <select class="form-select">
+              <option disabled selected>Year</option>
+              <option>1st Year</option>
+              <option>2nd Year</option>
+              <option>3rd Year</option>
+              <option>4th Year</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Branch*</label>
+            <input type="text" class="form-control" placeholder="Branch" />
+          </div>
+        </div>
+
+        <!-- Courses -->
+        <div class="mb-3">
+          <label class="form-label">Interested in Which Course*</label>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" />
+            <label class="form-check-label"
+              >Full Stack Web Development – Placement Oriented</label
+            >
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" />
+            <label class="form-check-label"
+              >Data Science with Python – Placement Oriented</label
+            >
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" />
+            <label class="form-check-label"
+              >Data Analytics with Python – Placement Oriented</label
+            >
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" />
+            <label class="form-check-label">Business Analyst</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" />
+            <label class="form-check-label">Java Programming</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" />
+            <label class="form-check-label">Python Programming</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" />
+            <label class="form-check-label">C/C++ Programming</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" />
+            <label class="form-check-label">Other</label>
+          </div>
+        </div>
+
+        <!-- Row 4 -->
+        <div class="row mb-4">
+          <div class="col-md-6">
+            <label class="form-label">
+              Source of Information <br />
+              <small
+                >(Only choose 'Received call from institute' if you actually got
+                a call from us)</small
+              >
+            </label>
+            <select class="form-select">
+              <option disabled selected>Source of Information</option>
+              <option>Social Media</option>
+              <option>Friend</option>
+              <option>College Workshop</option>
+              <option>Received call from institute</option>
+            </select>
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label"
+              >Name of Executive*
+              <br />
+              <small
+                >(Write or Choose The Name of the Executive From the Option Below)</small
+              >
+            </label>
+
+            <select class="form-select">
+              <option disabled selected>Name of Executive</option>
+              <option>Executive 1</option>
+              <option>Executive 2</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Submit button in its own row -->
+        <div class="text-center mt-4">
+          <button type="button" class="submit-btn">Submit</button>
+          
+        </div>
+      </form>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
