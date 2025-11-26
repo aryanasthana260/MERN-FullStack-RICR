@@ -1,48 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Calculator</title>
-  <link rel="stylesheet" href="calculator.css">
-</head>
-<body>
-
-  <!-- Background card like in the image -->
-  <div class="calc-wrapper">
-    <div class="calculator">
-      <!-- Display -->
-      <input type="text" id="display" readonly>
-
-      <!-- Buttons -->
-      <div class="keys">
-        <button onclick="appendValue('7')">7</button>
-        <button onclick="appendValue('8')">8</button>
-        <button onclick="appendValue('9')">9</button>
-        <button class="operator" onclick="appendValue('/')">/</button>
-
-        <button onclick="appendValue('4')">4</button>
-        <button onclick="appendValue('5')">5</button>
-        <button onclick="appendValue('6')">6</button>
-        <button class="operator" onclick="appendValue('*')">*</button>
-
-        <button onclick="appendValue('1')">1</button>
-        <button onclick="appendValue('2')">2</button>
-        <button onclick="appendValue('3')">3</button>
-        <button class="operator" onclick="appendValue('-')">-</button>
-
-        <button onclick="appendValue('.')">.</button>
-        <button onclick="appendValue('0')">0</button>
-        <button class="operator" onclick="appendValue('+')">+</button>
-        <button class="clear" onclick="clearDisplay()">C</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>  
+    <div class="container">
+      <div class="top">
+        <input type="text" name="display" placeholder="0" id="display" />
+        <button id="cancel" onclick="Input('C')">C</button>
       </div>
-
-      <!-- Orange = bar at bottom -->
-      <div class="equal-bar">
-        <button class="equal" onclick="calculate()">=</button>
+      <div class="allbuttons">
+        <button class="btn" onclick="Input('7')">7</button>
+        <button class="btn" onclick="Input('8')">8</button>
+        <button class="btn" onclick="Input('9')">9</button>
+        <button class="btn" onclick="Input('/')">/</button>
+        <button class="btn" onclick="Input('4')">4</button>
+        <button class="btn" onclick="Input('5')">5</button>
+        <button class="btn" onclick="Input('6')">6</button>
+        <button class="btn" onclick="Input('*')">*</button>
+        <button class="btn" onclick="Input('1')">1</button>
+        <button class="btn" onclick="Input('2')">2</button>
+        <button class="btn" onclick="Input('3')">3</button>
+        <button class="btn" onclick="Input('-')">-</button>
+        <button class="btn" onclick="Input('0')">0</button>
+        <button class="btn" onclick="Input('.')">.</button>
+        <button class="btn" onclick="Input('=')">=</button>
+        <button class="btn" onclick="Input('+')">+</button>
       </div>
     </div>
-  </div>
 
-  <script src="calculator.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
