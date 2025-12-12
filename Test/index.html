@@ -23,7 +23,6 @@
         min-height: 90vh;
         display: flex;
         align-items: center;
-
         background-color: white;
       }
 
@@ -56,6 +55,11 @@
       #contact {
         background-color: #ffebcd;
       }
+
+      /* Checkout section */
+      #checkout {
+        background-color: #f8f9fa;
+      }
     </style>
   </head>
   <body>
@@ -65,7 +69,12 @@
     >
       <div class="container">
         <a class="navbar-brand fw-bold" href="#home">Shopping Kart</a>
-        <button class="navbar-toggler" type="button">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -110,7 +119,7 @@
               <img
                 class="container small"
                 src="black-friday-elements-assortment.jpg"
-                alt=""
+                alt="Shopping"
               />
               <h5 class="mb-3">Smooth Online Shopping</h5>
               <p class="mb-0">
@@ -173,11 +182,13 @@
                 <h5 class="card-title">Wireless Headphones</h5>
                 <h6 class="card-subtitle mb-2 text-muted">Brand: blahblah</h6>
                 <p class="fw-semibold mb-2">Price: ₹999</p>
-                <p class="card-text flex-grow-1">20 hourbattery amazing</p>
-                <!-- Buy anchor (future Checkout page) -->
-                <a href="#contact" class="btn btn-outline-primary mt-auto">
+                <p class="card-text flex-grow-1">20 hour battery amazing</p>
+                <button
+                  class="btn btn-outline-primary mt-auto"
+                  onclick="buyProduct('Wireless Headphones', 'blahblah', '₹999', '20 hour battery amazing')"
+                >
                   Buy Now
-                </a>
+                </button>
               </div>
             </div>
           </div>
@@ -190,9 +201,12 @@
                 <h6 class="card-subtitle mb-2 text-muted">Brand: blahblah2</h6>
                 <p class="fw-semibold mb-2">Price: ₹1,999</p>
                 <p class="card-text flex-grow-1">the best watch ever.</p>
-                <a href="#contact" class="btn btn-outline-primary mt-auto">
+                <button
+                  class="btn btn-outline-primary mt-auto"
+                  onclick="buyProduct('Smartwatch', 'blahblah2', '₹1,999', 'the best watch ever.')"
+                >
                   Buy Now
-                </a>
+                </button>
               </div>
             </div>
           </div>
@@ -205,9 +219,12 @@
                 <h6 class="card-subtitle mb-2 text-muted">Brand: blahblah3</h6>
                 <p class="fw-semibold mb-2">Price: ₹2,999</p>
                 <p class="card-text flex-grow-1">good for running</p>
-                <a href="#contact" class="btn btn-outline-primary mt-auto">
+                <button
+                  class="btn btn-outline-primary mt-auto"
+                  onclick="buyProduct('Casual Sneakers', 'blahblah3', '₹2,999', 'good for running')"
+                >
                   Buy Now
-                </a>
+                </button>
               </div>
             </div>
           </div>
@@ -220,11 +237,113 @@
                 <h6 class="card-subtitle mb-2 text-muted">Brand: blahblah4</h6>
                 <p class="fw-semibold mb-2">Price: ₹3,999</p>
                 <p class="card-text flex-grow-1">can survive nuclear blast.</p>
-                <a href="#contact" class="btn btn-outline-primary mt-auto">
+                <button
+                  class="btn btn-outline-primary mt-auto"
+                  onclick="buyProduct('Laptop Backpack', 'blahblah4', '₹3,999', 'can survive nuclear blast.')"
+                >
                   Buy Now
-                </a>
+                </button>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Checkout Section -->
+    <section id="checkout" style="display: none;">
+      <div class="container">
+        <div class="row mb-4">
+          <div class="col text-center">
+            <h2>Checkout</h2>
+            <p class="text-muted">Complete your purchase below.</p>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <!-- Selected Product Info -->
+            <div class="card mb-4">
+              <div class="card-body">
+                <h5 class="card-title">Selected Product</h5>
+                <p class="mb-1"><strong>Product:</strong> <span id="checkoutProduct"></span></p>
+                <p class="mb-1"><strong>Brand:</strong> <span id="checkoutBrand"></span></p>
+                <p class="mb-1"><strong>Price:</strong> <span id="checkoutPrice"></span></p>
+                <p class="mb-0"><strong>Description:</strong> <span id="checkoutDesc"></span></p>
+              </div>
+            </div>
+
+            <!-- Checkout Form -->
+            <form id="checkoutForm">
+              <div class="mb-3">
+                <label for="customerName" class="form-label">Name *</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="customerName"
+                  placeholder="Enter your name"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="customerAddress" class="form-label">Address *</label>
+                <textarea
+                  class="form-control"
+                  id="customerAddress"
+                  rows="2"
+                  placeholder="Enter your address"
+                  required
+                ></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="customerPhone" class="form-label">Phone Number *</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="customerPhone"
+                  placeholder="Enter your phone number"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="customerEmail" class="form-label">Email *</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="customerEmail"
+                  placeholder="name@example.com"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="paymentMode" class="form-label">Payment Mode *</label>
+                <select class="form-select" id="paymentMode" required>
+                  <option value="">Choose...</option>
+                  <option value="Cash on Delivery">Cash on Delivery</option>
+                  <option value="Credit Card">Credit Card</option>
+                  <option value="Debit Card">Debit Card</option>
+                  <option value="UPI">UPI</option>
+                  <option value="Net Banking">Net Banking</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="quantity" class="form-label">Quantity *</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="quantity"
+                  min="1"
+                  value="1"
+                  required
+                />
+              </div>
+              <button type="submit" class="btn btn-success me-2">
+                Complete Purchase
+              </button>
+              <button type="button" class="btn btn-secondary" onclick="cancelCheckout()">
+                Cancel
+              </button>
+            </form>
           </div>
         </div>
       </div>
@@ -244,37 +363,36 @@
 
         <div class="row justify-content-center">
           <div class="col-md-8">
-            <!--form simple -->
-            <form>
+            <form id="contactForm">
               <div class="mb-3">
-                <label for="name" class="form-label" id="name">Your Name</label>
+                <label for="name" class="form-label">Your Name *</label>
                 <input
                   type="text"
                   class="form-control"
                   id="name"
                   placeholder="Enter your name"
+                  required
                 />
               </div>
               <div class="mb-3">
-                <label for="email" class="form-label" id="email"
-                  >Email address</label
-                >
+                <label for="email" class="form-label">Email address *</label>
                 <input
                   type="email"
                   class="form-control"
                   id="email"
                   placeholder="name@example.com"
+                  required
                 />
               </div>
               <div class="mb-3">
-                <label for="message" class="form-label" id="message"
-                  >Message</label
-                >
+                <label for="message" class="form-label">Message *</label>
                 <textarea
                   class="form-control"
                   id="message"
                   rows="4"
                   placeholder="Write your message here..."
+                  required
+                  minlength="10"
                 ></textarea>
               </div>
               <button type="submit" class="btn btn-primary">
@@ -296,7 +414,7 @@
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
   </body>
