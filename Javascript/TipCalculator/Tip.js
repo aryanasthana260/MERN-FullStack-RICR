@@ -20,6 +20,6 @@
             var amountPerPerson = totalAmount / numPeople;
             
            
-            document.getElementById('resultAmount').textContent = amountPerPerson.toFixed(2) + '₹';
+            document.getElementById('resultAmount').textContent = amountPerPerson.toFixed(2) + '$';
             document.getElementById('resultSection').style.display = 'block';
         });
