@@ -8,6 +8,7 @@ function enquirySubmit() {
   const qf = document.getElementById("EnqQualification").value;
   const cl = document.getElementById("EnqCollege").value;
   const yr = document.getElementById("EnqYear").value;
+
   const br = document.getElementById("EnqBranch").value;
 
   console.log("Name : " + nm);
