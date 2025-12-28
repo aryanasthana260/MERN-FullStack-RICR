@@ -5,11 +5,12 @@ import { FaHome } from "react-icons/fa";
 const Header = () => {
   return (
     <>
-      <div className="bg-primary d-flex justify-content-between align-items-center  text-light">
-        <h3 className="bg-red-600 border border-amber-400 text-center text-[25px]">
-          My Website
-        </h3>
+      <div className="bg-primary d-flex justify-content-between align-items-center  text-light bg-lime-50">
+       
         <div className="flex gap-3 justify-center bg-blue-600 p-5  text-[18px] text-white">
+          <div className="">
+            <h1 >Makeup-API</h1>
+          </div>
           <Link
             to={"/"}
             className="flex items-center gap-1 text-decoration-none text-light "
