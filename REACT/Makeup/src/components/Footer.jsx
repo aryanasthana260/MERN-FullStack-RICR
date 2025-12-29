@@ -2,16 +2,19 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <>
-      <div className="d-flex justify-content-evenly bg-secondary text-light text-center">
+    <footer className="bg-gray-900 text-gray-300">
+      <div className="max-w-6xl mx-auto px-10 py-6 flex justify-between items-center text-2xl">
         <span>
-          All Rights Reserved by <i>"AryanTheGreat" </i>- Copyrights @2026
+          © 2026 All rights reserved by{" "}
+          <i className="text-white">AryanTheGreat</i>
         </span>
-        <span>
-          Made with ❤️ by <i>"AryanTheGreat" </i>{" "}
+
+        <span className="">
+          Made with <span className="text-red-500" >❤️</span> by{" "}
+          <i className="text-white">AryanTheGreat</i>
         </span>
       </div>
-    </>
+    </footer>
   );
 };
 

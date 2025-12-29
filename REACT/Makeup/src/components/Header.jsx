@@ -4,31 +4,46 @@ import { FaHome } from "react-icons/fa";
 
 const Header = () => {
   return (
-    <>
-      <div className="bg-primary d-flex justify-content-between align-items-center  text-light bg-lime-50">
-       
-        <div className="flex gap-3 justify-center bg-blue-600 p-5  text-[18px] text-white">
-          <div className="">
-            <h1 >Makeup-API</h1>
-          </div>
+    <header className="w-full bg-pink-500 text-white">
+      <div className="max-w-6xl mx-auto px-10 py-4 flex items-center justify-between">
+        {/* Logo / Brand */}
+        <h1 className="text-4xl font-bold tracking-wide">
+          Makeup<span className="text-black">API</span>
+        </h1>
+
+        {/* Navigation */}
+        <nav className="flex gap-8 text-lg">
           <Link
-            to={"/"}
-            className="flex items-center gap-1 text-decoration-none text-light "
+            to="/"
+            className="flex items-center gap-2 hover:text-black transition"
           >
-            <FaHome className="text-red-400" /> <span>Home</span>
+            <FaHome />
+            Home
           </Link>
-          <Link to={"/about"} className="text-decoration-none text-light">
+
+          <Link
+            to="/about"
+            className="hover:text-black transition"
+          >
             About
           </Link>
-          <Link to={"/product"} className="text-decoration-none text-light">
-            Product
+
+          <Link
+            to="/product"
+            className="hover:text-black transition"
+          >
+            Products
           </Link>
-          <Link to={"/contact"} className="text-decoration-none text-light">
+
+          <Link
+            to="/contact"
+            className="hover:text-black transition"
+          >
             Contact
           </Link>
-        </div>
+        </nav>
       </div>
-    </>
+    </header>
   );
 };
 
