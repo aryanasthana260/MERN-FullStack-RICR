@@ -49,8 +49,8 @@ const Home = () => {
       </section>
 
       {/* Features */}
-      <section className="bg-gray-50 py-20">
-        <div className="max-w-6xl mx-auto px-10">
+      <section className="bg-amber-100 py-20 ">
+        <div className="max-w-6xl mx-auto px-10 ">
           <h2 className="text-3xl font-semibold text-center mb-12">
             What Makes Us Different
           </h2>
