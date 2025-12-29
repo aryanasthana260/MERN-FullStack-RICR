@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import { SiGnuprivacyguard } from "react-icons/si";
+
 const Signup = () => {
   const [SignupData, setSignupData] = useState({
     fullName: "",
@@ -49,7 +51,8 @@ const Signup = () => {
   return (
     <div className="min-h-screen bg-amber-100 flex items-center justify-center">
       <div className="bg-white w-full max-w-md p-8 rounded-xl shadow-md">
-        <h1 className="text-3xl font-semibold text-center mb-6">
+        <h1 className="text-3xl font-semibold text-center mb-6 flex items-center gap-1 justify-center">
+            <SiGnuprivacyguard />
           Signup Up :)
         </h1>
 

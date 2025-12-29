@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { SlLogin } from "react-icons/sl";
 
 const Login = () => {
   const [LoginData, setLoginData] = useState({
@@ -41,7 +42,9 @@ const Login = () => {
   return (
     <div className="min-h-screen bg-amber-100 flex items-center justify-center">
       <div className="bg-white w-full max-w-md p-8 rounded-xl shadow-md">
-        <h1 className="text-3xl font-semibold text-center mb-6">Login</h1>
+        <h1 className="text-3xl font-semibold text-center mb-6 flex items-center gap-1 justify-center">
+            <SlLogin className="" />
+            Login</h1>
 
         <form
           className="flex flex-col gap-4"
