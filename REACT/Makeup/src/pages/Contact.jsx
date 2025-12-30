@@ -8,16 +8,28 @@ const Contact = () => {
     city: "",
     subject: "",
     message: "",
+    religion: "",
+    gender: "",
+    skill: [],
   });
 
   const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setContactData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+    const { name, value, type, checked } = e.target;
+    if (type === "checkbox") {
+      let temp = contactData.skill;
+      if (checked) {
+        temp.push(value);
+        setContactData((previousData) => ({ ...previousData, [name]: temp }));
+      } else {
+        temp = Object.values(temp); //Convert to Array
+        temp = temp.filter((word) => word !== value); //Remove the Undersired Value
+        setContactData((previousData) => ({ ...previousData, [name]: temp }));
+      }
+    } else {
+      setContactData((previousData) => ({ ...previousData, [name]: value }));
+    }
   };
 
   const handleClearForm = () => {
@@ -28,13 +40,15 @@ const Contact = () => {
       city: "",
       subject: "",
       message: "",
+      religion: "",
+      gender: "",
+      skill: [],
     });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-
     try {
       console.log(contactData);
     } catch (error) {
@@ -42,7 +56,6 @@ const Contact = () => {
     } finally {
       setIsLoading(false);
     }
-
     handleClearForm();
   };
 
@@ -117,6 +130,118 @@ const Contact = () => {
             className="border border-gray-300 rounded px-3 py-2 h-28 resize-none focus:ring-2 focus:ring-pink-400 outline-none"
             required
           />
+
+          <div className="border border-gray-300 rounded p-2 resize-none focus:ring-2 focus:ring-pink-400 outline-none ">
+            <label htmlFor="religion" className="text-[19px] font-semibold">
+              Religion-
+            </label>
+            <select
+              className="align-items-end px-15 py-3  outline-1 font-light "
+              name="religion"
+              id="religion"
+              onChange={handleChange}
+              value={contactData.religion}
+            >
+              <option value="" className="">
+                ---Select Religion---
+              </option>
+              <option value="islam">Islam</option>
+              <option value="hinduism">Hinduism</option>
+              <option value="christianity">Christianity</option>
+              <option value="buddhism">Buddhism</option>
+              <option value="jainism">Jainism</option>
+              <option value="sikhism">Sikhism</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div className="border border-gray-300 rounded p-3 resize-none focus:ring-2 focus:ring-pink-400 outline-none text-[18px] font-light">
+            <label htmlFor="gender" className="text-[19px] font-semibold ">
+              Gender-->
+            </label>
+            <input
+              className="outline-none ] "
+              type="radio"
+              name="gender"
+              value="male"
+              onChange={handleChange}
+              checked={contactData.gender === "male"}
+            />{" "}
+            ...Male...
+            <input
+              type="radio"
+              name="gender"
+              value="female"
+              onChange={handleChange}
+              checked={contactData.gender === "female"}
+            />{" "}
+            ...Female...
+            <input
+              type="radio"
+              name="gender"
+              value="other"
+              onChange={handleChange}
+              checked={contactData.gender === "other"}
+            />{" "}
+            ...Other...
+          </div>
+
+          <div className="border border-gray-300 rounded p-3 resize-none focus:ring-2 focus:ring-pink-400 outline-none">
+            <label htmlFor="skill " className="text-[19px] font-semibold">
+              Skill known:-
+            </label>
+            <div className="font-light">
+              <input
+                type="checkbox"
+                name="skill"
+                value="html"
+                onChange={handleChange}
+                checked={
+                  Object.values(contactData.skill).find(
+                    (word) => word === "html"
+                  )
+                    ? true
+                    : false
+                }
+              />{" "}
+              ...HTML...
+              <input
+                type="checkbox"
+                name="skill"
+                value="css"
+                onChange={handleChange}
+                checked={
+                  Object.values(contactData.skill).find(
+                    (word) => word === "css"
+                  )
+                    ? true
+                    : false
+                }
+              />{" "}
+              ...CSS...
+              <input
+                type="checkbox"
+                name="skill"
+                value="js"
+                onChange={handleChange}
+                checked={
+                  Object.values(contactData.skill).find((word) => word === "js")
+                    ? true
+                    : false
+                }
+              />{" "}
+              ...JS...
+              <input
+                className="p-2 py-2"
+                type="checkbox"
+                name="skill"
+                value="react"
+                onChange={handleChange}
+                checked={Object.values(contactData.skill).includes("react")}
+              />{" "}
+            ...REACT...
+            </div>
+          </div>
 
           {/* Buttons */}
           <div className="flex justify-between pt-4">

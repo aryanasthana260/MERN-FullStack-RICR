@@ -9,7 +9,7 @@ import { SiGnuprivacyguard } from "react-icons/si";
 
 const Header = () => {
   return (
-    <header className="w-full bg-pink-500 text-white">
+    <header className="w-full bg-pink-500 text-white sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-10 py-4 flex items-center justify-between">
         {/* Logo / Brand */}
         <h1 className="text-4xl font-bold tracking-wide">
@@ -17,10 +17,10 @@ const Header = () => {
         </h1>
 
         {/* Navigation */}
-        <nav className="flex gap-8 text-lg">
+        <nav className="flex gap-8 text-lg  ">
           <Link
             to="/"
-            className="flex items-center gap-1 hover:text-black transition"
+            className="flex items-center gap-1 hover:text-black transition "
           >
             <FaHome />
             Home

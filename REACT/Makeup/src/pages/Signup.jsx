@@ -52,12 +52,12 @@ const Signup = () => {
     <div className="min-h-screen bg-amber-100 flex items-center justify-center">
       <div className="bg-white w-full max-w-md p-8 rounded-xl shadow-md">
         <h1 className="text-3xl font-semibold text-center mb-6 flex items-center gap-1 justify-center">
-            <SiGnuprivacyguard />
+          <SiGnuprivacyguard />
           Signup Up :)
         </h1>
 
         <form
-          className="flex flex-col gap-4"
+          className="flex flex-col gap-4 "
           onSubmit={handleSubmit}
           onReset={handleClearForm}
         >
