@@ -3,7 +3,7 @@ import React from "react";
 const Form = () => {
   return (
     <>
-      <div className="bg-slate-150 min-h-screen pt-[76px] font-sans border border-blue-200">
+      <div className="bg-slate-100 min-h-screen pt-[76px] font-sans border border-blue-100">
         {/* NAVBAR */}
         <nav className="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
           <div className="max-w-7xl mx-auto px-4">
@@ -16,29 +16,19 @@ const Form = () => {
 
               <ul className="hidden lg:flex gap-6 text-gray-900 font-medium">
                 <li>
-                  <a href="#" className="hover:bg-blue-100 rounded-4xl">
-                    Home
-                  </a>
+                  <a href="#" className="hover:bg-blue-100 rounded-4xl">Home</a>
                 </li>
                 <li>
-                  <a href="#" className="hover:bg-blue-100 rounded-4xl">
-                    About
-                  </a>
+                  <a href="#"  className="hover:bg-blue-100 rounded-4xl">About</a>
                 </li>
                 <li>
-                  <a href="#" className="hover:bg-blue-100 rounded-4xl">
-                    Courses
-                  </a>
+                  <a href="#"  className="hover:bg-blue-100 rounded-4xl">Courses</a>
                 </li>
                 <li>
-                  <a href="#" className="hover:bg-blue-100 rounded-4xl">
-                    IDE
-                  </a>
+                  <a href="#"  className="hover:bg-blue-100 rounded-4xl">IDE</a>
                 </li>
                 <li>
-                  <a href="#" className="hover:bg-blue-100 rounded-4xl">
-                    Contact Us
-                  </a>
+                  <a href="#"className="hover:bg-blue-100 rounded-4xl" >Contact Us</a>
                 </li>
               </ul>
 
@@ -59,15 +49,9 @@ const Form = () => {
 
         {/* FORM SECTION */}
         <main>
-          <div
-            className="max-w-[900px] mx-auto mt-6 p-12 rounded-[20px]"
-            style={{
-              background: "rgba(93, 226, 231, 0.08)",
-              boxShadow: "0 18px 24px rgba(0, 0, 0, 0.08)",
-            }}
-          >
+          <div className="max-w-[980px] mx-auto mt-10 p-12 rounded-[24px] shadow bg-[#e4f0fc] ">
             <h1 className="text-center text-4xl font-bold">Enquiry Form</h1>
-            <p className="text-center mt-2 mb-6 text-gray-700">
+            <p className="text-center mt-4 mb-8 text-gray-900 font-[30px]">
               Have questions or need assistance? Fill out the form below to
               connect with our team and explore your opportunities.
             </p>
@@ -76,16 +60,16 @@ const Form = () => {
               {/* ROW 1 */}
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <label className="font-semibold">Person Name*</label>
+                  <label className="font-semibold text-[19px]">Person Name*</label>
                   <input
                     type="text"
                     placeholder="Person Name"
-                    className="w-full mt-1 p-3 rounded-xl border border-[#b9c8d3] bg-white text-[#1f2937]"
+                   className="w-full mt-1 p-3 rounded-xl border border-[#b9c8d3] bg-white text-[#1f2937]"
                   />
                 </div>
 
                 <div>
-                  <label className="font-semibold">Contact Number*</label>
+                  <label className="font-semibold text-[19px]">Contact Number*</label>
                   <input
                     type="tel"
                     placeholder="Contact Number"
@@ -101,7 +85,7 @@ const Form = () => {
               {/* ROW 2 */}
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <label className="font-semibold">Email*</label>
+                  <label className="font-semibold text-[19px]">Email*</label>
                   <input
                     type="email"
                     placeholder="Email"
@@ -110,18 +94,18 @@ const Form = () => {
                 </div>
 
                 <div>
-                  <label className="font-semibold">Qualification*</label>
+                  <label className="font-semibold text-[19px]">Qualification*</label>
                   <input
                     type="text"
                     placeholder="Qualification"
-                    className="w-full mt-1 p-3 rounded-xl border border-[#b9c8d3] bg-white text-[#1f2937]"
+                   className="w-full mt-1 p-3 rounded-xl border border-[#b9c8d3] bg-white text-[#1f2937]"
                   />
                 </div>
               </div>
 
               {/* COLLEGE */}
               <div>
-                <label className="font-semibold">College / School Name*</label>
+                <label className="font-semibold text-[19px]">College / School Name*</label>
                 <input
                   type="text"
                   placeholder="College / School Name"
@@ -132,11 +116,9 @@ const Form = () => {
               {/* ROW 3 */}
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <label className="font-semibold">Year*</label>
+                  <label className="font-semibold text-[19px]">Year*</label>
                   <select className="w-full mt-1 p-3 rounded-xl border border-[#b9c8d3] bg-white text-[#1f2937]">
-                    <option value="" selected disabled>
-                      Year
-                    </option>
+                    <option value="" selected disabled>Year</option>
                     <option>1st Year</option>
                     <option>2nd Year</option>
                     <option>3rd Year</option>
@@ -147,18 +129,18 @@ const Form = () => {
                 </div>
 
                 <div>
-                  <label className="font-semibold">Branch*</label>
+                  <label className="font-semibold text-[19px]">Branch*</label>
                   <input
                     type="text"
                     placeholder="Branch"
-                    className="w-full mt-1 p-3 rounded-xl border border-[#b9c8d3] bg-white text-[#1f2937]"
+                   className="w-full mt-1 p-3 rounded-xl border border-[#b9c8d3] bg-white text-[#1f2937]"
                   />
                 </div>
               </div>
 
               {/* COURSES */}
               <div>
-                <label className="font-semibold block mb-2">
+                <label className="font-semibold block mb-4 mt-8 text-[19px]">
                   Interested in Which Course*
                 </label>
 
@@ -206,13 +188,11 @@ const Form = () => {
               {/* ROW 4 */}
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <label className="font-semibold">
+                  <label className="font-semibold text-[19px]">
                     Source of Information*
                   </label>
-                  <select className="w-full mt-1 p-3 rounded-xl border border-[#b9c8d3] bg-white text-[#1f2937]">
-                    <option value="" selected disabled>
-                      Source of Information*
-                    </option>
+                  <select className="w-full mt-1 p-3 rounded-xl border border-[#b9c8d3] bg-white text-[#1f2937] ">
+                    <option value="" selected disabled  > Source of Information*</option>
 
                     <option>Social Media</option>
                     <option>Friend</option>
@@ -223,7 +203,7 @@ const Form = () => {
                 </div>
 
                 <div>
-                  <label className="font-semibold">Name of Executive*</label>
+                  <label className="font-semibold text-[19px]">Name of Executive*</label>
                   <select className="w-full mt-1 p-3 rounded-xl border border-[#b9c8d3] bg-white text-[#1f2937]">
                     <option>Name of Executive (if any)</option>
                   </select>
