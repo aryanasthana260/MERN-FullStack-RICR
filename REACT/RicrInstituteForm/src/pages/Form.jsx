@@ -69,7 +69,7 @@ const Form = () => {
         
 
         <main>
-          <div className="max-w-[980px] mx-auto mt-10 p-12 rounded-[24px] shadow bg-[#e4f0fc]">
+          <div className="max-w-[980px] mx-auto mt-10 p-12 rounded-[24px] shadow-2xl bg-[#e2f0ff]">
             <h1 className="text-center text-4xl font-bold">Enquiry Form</h1>
             <p className="text-center mt-4 mb-8 text-gray-900 font-[30px]">
               Have questions or need assistance? Fill out the form below to
@@ -306,7 +306,7 @@ const Form = () => {
               <div className="text-center mt-6">
                 <button
                   onClick={handleSubmit}
-                  className="bg-[#0d1b2a] text-white px-10 py-3 rounded-full text-lg hover:bg-gray-700"
+                  className="bg-[#0d1b2a] text-white px-10 py-4 rounded-full text-lg hover:bg-blue-800"
                 >
                   {isLoading ? "Submitting..." : "Submit"}
                 </button>

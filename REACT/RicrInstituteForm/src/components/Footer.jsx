@@ -2,8 +2,8 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#125785] text-white mt-16 py-10">
-      <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-6">
+    <footer className="bg-[#125785] text-white mt-16 py-8">
+      <div className="max-w-7xl mx-auto px-8 grid md:grid-cols-4 gap-10">
         <div>
           <img
             src="https://ricr.in/assets/home/assets/images/logo/logo.png"
@@ -50,15 +50,19 @@ const Footer = () => {
         </div>
 
         <div className="text-sm">
-          <p>
-            <i className="fa-solid fa-location-dot mr-2"></i>Minal Mall, Bhopal
-          </p>
-          <p>
-            <i className="fa-solid fa-envelope mr-2"></i>contact@ricr.in
-          </p>
-          <p>
-            <i className="fa-solid fa-phone mr-2"></i>+91 87659 49245
-          </p>
+          <h6 className="font-bold mb-2 pl-2 "> Address:-</h6>
+          <ul>
+            <p>
+              <i className="fa-solid fa-location-dot mr-2"></i>Minal Mall,
+              Bhopal
+            </p>
+            <p>
+              <i className="fa-solid fa-envelope mr-2"></i>contact@ricr.in
+            </p>
+            <p>
+              <i className="fa-solid fa-phone mr-2"></i>+91 87659 49245
+            </p>
+          </ul>
         </div>
       </div>
 
