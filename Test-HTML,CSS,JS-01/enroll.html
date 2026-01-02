@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Course Enrollment</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="enroll-wrapper">
+      <div class="enroll-card">
+        <h2>Student Enrollment</h2>
+
+        <form id="enrollForm" class="enroll-form">
+          <div class="form-row">
+            <input id="studentName" placeholder="Full Name" required />
+            <input placeholder="College Name" required />
+          </div>
+
+          <div class="form-row">
+            <input placeholder="Branch" required />
+            <input placeholder="Semester" required />
+          </div>
+
+          <div class="form-row">
+            <input type="tel" placeholder="Phone Number" required />
+            <input type="email" placeholder="Email Address" required />
+          </div>
+
+          <div class="form-row">
+            <select required>
+              <option value="">Gender</option>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Other</option>
+            </select>
+            <input id="courseName" readonly />
+          </div>
+
+          <button type="submit" class="enroll-btn">Confirm Enrollment</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
