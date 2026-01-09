@@ -18,7 +18,7 @@ async function getProducts() {
             <!-- Image column -->
             <div class="col-3">
               <img
-                src="${element.image}"
+                src="${element.image}">
                 alt="${element.title}"
                 class="w-100 object-fit-contain"
                 style="height:200px"
