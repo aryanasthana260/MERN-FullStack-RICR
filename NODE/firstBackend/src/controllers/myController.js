@@ -77,9 +77,9 @@ export const UserLogout = async (req, res, next) => {
 
 export const UserUpdate = async (req, res, next) => {
   try {
-    const { fullName, email, phone } = req.body;
+    const { fullName, email, phone, password } = req.body;
 
-    if (!fullName || !email || !phone) {
+    if (!fullName || !email || !phone || !password) {
       const error = new Error("All Feilds Required");
       error.statusCode = 400;
       return next(error);
@@ -93,6 +93,9 @@ export const UserUpdate = async (req, res, next) => {
     }
     existingUser.fullName = fullName;
     existingUser.phone = phone;
+    existingUser.email = email;
+    existingUser.password = password;
+    
 
     await existingUser.save();
 
