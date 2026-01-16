@@ -1,7 +1,5 @@
 import mongoose from "mongoose";
-import bcrypt from "bcrypt";
-
-const userSchema = mongoose.Schema(
+const contactSchema = mongoose.Schema(
   {
     fullName: {
       type: String,
@@ -10,13 +8,12 @@ const userSchema = mongoose.Schema(
     email: {
       type: String,
       required: true,
-      unique: true,
     },
     mobileNumber: {
       type: String,
       required: true,
     },
-    password: {
+    message: {
       type: String,
       required: true,
     },
@@ -24,5 +21,5 @@ const userSchema = mongoose.Schema(
   { timestamps: true }
 );
 
-const User = mongoose.model("User", userSchema);
-export default User;
+const Contact = mongoose.model("Contact", contactSchema);
+export default Contact;
