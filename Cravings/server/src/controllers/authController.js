@@ -1,5 +1,6 @@
 import User from "../models/userModel.js";
 import bcrypt from "bcrypt";
+import { genToken } from "../utils/authToken.js";
 
 export const UserRegister = async (req, res, next) => {
   try {
@@ -46,7 +47,7 @@ export const UserLogin = async (req, res, next) => {
   try {
     const { email, password } = req.body;
 
-    if (!email || !password) {
+    if (!email || !password) {☺
       const error = new Error("ALl Fields Required");
       error.statusCode = 400;
       return next(error);
@@ -61,13 +62,17 @@ export const UserLogin = async (req, res, next) => {
     }
     const isPasswordMatch = await bcrypt.compare(
       password,
-      existingUser.password
+      existingUser.password,
     );
     if (!isPasswordMatch) {
       const error = new Error("Password did not match");
       error.statusCode = 401;
       return next(error);
     }
+
+    //token generation will be done here
+    genToken(existingUser, res);
+
     res.status(200).json({ message: "Login Successful", data: existingUser });
   } catch (error) {
     next(error);

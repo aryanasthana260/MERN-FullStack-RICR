@@ -2,15 +2,17 @@ import React, { useState } from "react";
 import toast from "react-hot-toast";
 import api from "../config/Api";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 
 const login = () => {
+  const {setUser,setIsLogin}= useAuth();
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
-    fullName: "",
+    
     email: "",
-    mobileNumber: "",
-    message: "",
+    password:"",
+    
   });
   const [isLoading, setIsLoading] = useState(false);
 
@@ -21,10 +23,10 @@ const login = () => {
 
   const handleClearForm = () => {
     setFormData({
-      fullName: "",
+      
       email: "",
-      mobileNumber: "",
-      message: "",
+      password:"",
+      
     });
   };
 
@@ -37,9 +39,12 @@ const login = () => {
     try {
       const res = await api.post("/auth/login", formData);
       toast.success(res.data.message);
+      setUser(res.data.data)
+      setIsLogin(true);
+      sessionStorage.setItem("CravingUser",JSON.stringify(res.data.data))
       handleClearForm();
-
       navigate("/userdashboard");
+
     } catch (error) {
       console.log(error);
       toast.error(error.response?.data?.message || "technical error");

@@ -6,7 +6,7 @@ import { CgProfile } from "react-icons/cg";
 import { FaTruckFast } from "react-icons/fa6";
 import { GiHamburgerMenu } from "react-icons/gi";
 
-const UserSideBar = ({ active, setActive, isCollapsed, setIsCollapsed }) => {
+const UserSideBar = ({ active, setActive, isCollapsed, setIsCollapsed }) => { // props 
   const menuItems = [
     { key: "overview", title: "OverView", icon: <TbChartTreemap /> },
     { key: "profile", title: "Profile", icon: <CgProfile /> },

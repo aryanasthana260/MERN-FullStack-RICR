@@ -1,10 +1,12 @@
 import React from "react";
 import tranparentLogo from "../assets/transparentLogo.png";
 import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
+
 
 const Header = () => {
+  const { user, setIsLogin } = useAuth();
   const navigate = useNavigate();
-  
 
   return (
     <>
@@ -13,7 +15,7 @@ const Header = () => {
           <img
             src={tranparentLogo}
             alt=""
-            className="h-12 w-20 object-cover invert-100"
+            className="h-12 w-20 object-cover invert-100 animate-bounce"
           />
         </Link>
 
@@ -40,18 +42,25 @@ const Header = () => {
         </div>
 
         <div className="flex gap-4">
-          <button
-            onClick={() => navigate("/login")}
-            className="bg-(--color-secondary) py-2 px-4 font-bold hover:bg-(--color-secondary-hover) hover:text-white rounded-l-4xl "
-          >
-            Login
-          </button>
-          <button
-            onClick={() => navigate("/register")}
-            className="bg-(--color-secondary) py-2 px-4 font-bold hover:bg-(--color-secondary-hover) hover:text-white rounded-r-4xl "
-          >
-            Register
-          </button>
+          {isLogin ? (
+            <span className="text-red-500">{user.fullName}</span>
+          ) : (
+            <div>
+              {" "}
+              <button
+                onClick={() => navigate("/login")}
+                className="bg-(--color-secondary) py-2 px-4 font-bold hover:bg-(--color-secondary-hover) hover:text-white rounded-l-4xl "
+              >
+                Login
+              </button>
+              <button
+                onClick={() => navigate("/register")}
+                className="bg-(--color-secondary) py-2 px-4 font-bold hover:bg-(--color-secondary-hover) hover:text-white rounded-r-4xl "
+              >
+                Register
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </>
