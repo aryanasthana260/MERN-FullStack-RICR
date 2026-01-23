@@ -1,10 +1,10 @@
-import React, { useContext, useEffect, useState } from "react"; // imr to import react
+import React, { useEffect, useState } from "react";
+import { useContext } from "react";
 
 const AuthContext = React.createContext();
 
 export const AuthProvider = (props) => {
-  const [user, setUser] = useState(JSON.parse);
-
+  const [user, setUser] = useState(JSON.parse(sessionStorage.getItem("CravingUser")) || "");
   const [isLogin, setIsLogin] = useState(!!user);
 
   useEffect(() => {

@@ -47,7 +47,7 @@ export const UserLogin = async (req, res, next) => {
   try {
     const { email, password } = req.body;
 
-    if (!email || !password) {☺
+    if (!email || !password) {
       const error = new Error("ALl Fields Required");
       error.statusCode = 400;
       return next(error);

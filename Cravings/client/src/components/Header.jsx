@@ -3,9 +3,8 @@ import tranparentLogo from "../assets/transparentLogo.png";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
-
 const Header = () => {
-  const { user, setIsLogin } = useAuth();
+  const { user, isLogin } = useAuth();
   const navigate = useNavigate();
 
   return (
@@ -43,9 +42,14 @@ const Header = () => {
 
         <div className="flex gap-4">
           {isLogin ? (
-            <span className="text-red-500">{user.fullName}</span>
+            <div
+              className="text-amber-200"
+              onClick={() => navigate("/userdashboard")}
+            >
+              {user.fullName}
+            </div>
           ) : (
-            <div>
+            <>
               {" "}
               <button
                 onClick={() => navigate("/login")}
@@ -59,7 +63,7 @@ const Header = () => {
               >
                 Register
               </button>
-            </div>
+            </>
           )}
         </div>
       </div>
