@@ -8,9 +8,9 @@ const EditProfileModal = ({ onclose }) => {
   const [loading, setLoading] = useState(false);
 
   const [formData, setFormData] = useState({
-    fullName: user?.fullName || "",
-    email: user?.email || "",
-    mobileNumber: user?.mobileNumber || "",
+    fullName: user.fullName || "",
+    email: user.email || "",
+    mobileNumber: user.mobileNumber || "",
   });
 
   const handleChange = (e) => {

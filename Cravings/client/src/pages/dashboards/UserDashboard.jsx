@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import UserSideBar from "../../components/userDashBoard/UserSideBar";
-import UserOverview from "../../components/userDashBoard/userOverview";
-import UserProfile from "../../components/userDashBoard/UserProfile";
-import UserTransactions from "../../components/userDashBoard/UserTransactions";
-import UserHelpDesk from "../../components/userDashBoard/UserHelpDesk";
-import UserOrders from "../../components/userDashBoard/UserOrders";
-import { GiHamburgerMenu } from "react-icons/gi";
+import UserSideBar from "../../components/userDashboard/UserSideBar";
+import UserOverview from "../../components/userDashboard/userOverview";
+import UserProfile from "../../components/userDashboard/UserProfile";
+import UserOrders from "../../components/userDashboard/UserOrders";
+import UserTransactions from "../../components/userDashboard/userTransactions";
+import UserHelpDesk from "../../components/userDashboard/UserHelpDesk";
 
 const UserDashboard = () => {
   const [active, setActive] = useState("overview");
@@ -24,7 +23,7 @@ const UserDashboard = () => {
             setIsCollapsed={setIsCollapsed}
           />
         </div>
-        <div className={` ${isCollapsed ? "w-58/60" : "w-48/60"} duration-300`}>
+        <div className={`${isCollapsed ? "w-58/60" : "w-48/60"} duration-300`}>
           {active === "overview" && <UserOverview />}
           {active === "profile" && <UserProfile />}
           {active === "orders" && <UserOrders />}

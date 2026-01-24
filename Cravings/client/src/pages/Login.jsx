@@ -4,8 +4,9 @@ import api from "../config/Api";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
-const login = () => {
-  const { setUser, setIsLogin } = useAuth();
+const Login = () => {
+  const { setUser, setIsLogin, setRole } = useAuth();
+
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
@@ -31,7 +32,6 @@ const login = () => {
     setIsLoading(true);
 
     console.log(formData);
-
     try {
       const res = await api.post("/auth/login", formData);
       toast.success(res.data.message);
@@ -39,10 +39,34 @@ const login = () => {
       setIsLogin(true);
       sessionStorage.setItem("CravingUser", JSON.stringify(res.data.data));
       handleClearForm();
-      navigate("/userdashboard");
+      switch (res.data.data.role) {
+        case "manager": {
+          setRole("manager");
+          navigate("/restaurant-dashboard");
+          break;
+        }
+        case "partner": {
+          setRole("partner");
+          navigate("/rider-dashboard");
+          break;
+        }
+        case "customer": {
+          setRole("customer");
+          navigate("/user-dashboard");
+          break;
+        }
+        case "admin": {
+          setRole("admin");
+          navigate("/admin-dashboard");
+          break;
+        }
+
+        default:
+          break;
+      }
     } catch (error) {
       console.log(error);
-      toast.error(error.response?.data?.message || "Unknown error");
+      toast.error(error?.response?.data?.message || "Unknown Error");
     } finally {
       setIsLoading(false);
     }
@@ -57,6 +81,9 @@ const login = () => {
             <h1 className="text-4xl font-bold text-gray-900 mb-2">
               Welcome Back
             </h1>
+            {/* <p className="text-lg text-gray-600">
+              You are 1 step away to stop your Cavings
+            </p> */}
           </div>
 
           {/* Form Container */}
@@ -107,7 +134,7 @@ const login = () => {
                   disabled={isLoading}
                   className="flex-1 bg-linear-to-r from-indigo-600 to-indigo-700 text-white font-bold py-4 px-6 rounded-lg hover:from-indigo-700 hover:to-indigo-800 transition duration-300 transform hover:scale-105 shadow-lg disabled:scale-100 disabled:bg-gray-300  disabled:cursor-not-allowed"
                 >
-                  {isLoading ? "Lodaing..." : "Login"}
+                  {isLoading ? "loading.." : "Login"}
                 </button>
               </div>
             </form>
@@ -123,4 +150,4 @@ const login = () => {
   );
 };
 
-export default login;
+export default Login;
