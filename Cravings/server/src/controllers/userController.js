@@ -1,37 +1,45 @@
+import User from "../models/userModel.js";
+
 export const UserUpdate = async (req, res, next) => {
   try {
-    // Logic here
+    //logic here
 
     const { fullName, email, mobileNumber } = req.body;
     const currentUser = req.user;
 
     if (!fullName || !email || !mobileNumber) {
-      const error = new Error("All fields Required");
+      const error = new Error("All Feilds Required");
       error.statusCode = 400;
       return next(error);
     }
 
-    console.log("OldData", currentUser); // old user data in json format
-    // first way
-    //     currentUser.fullName=fullName;
-    //     currentUser.email=email;
-    //     currentUser.mobileNumber=mobileNumber;
-    //     await currentUser.save();
+    console.log("OldData: ", currentUser); //old user data in JSON format
+    //first Way
+    // currentUser.fullName = fullName;
+    // currentUser.email = email;
+    // currentUser.mobileNumber = mobileNumber;
+    // await currentUser.save();
 
-    // console.log("NewData",currentUser);
+    // console.log("NewData:", currentUser);
 
-    // second way
+    //Second Way
+
     const updatedUser = await User.findByIdAndUpdate(
       { _id: currentUser._id },
-      { fullName, email, mobileNumber },
+      {
+        fullName,
+        email,
+        mobileNumber,
+      },
       { new: true },
     );
 
-    // res.
-    // .status(200)
-    // .json({ message: "Profile Updated Successfully", data: updatedUser });
+    console.log("Updated User: ", updatedUser);
+    res
+      .status(200)
+      .json({ message: "User Updated Sucessfully", data: updatedUser });
 
-    console.log("Updated User Data:", updatedUser);
+    console.log("Updating the user");
   } catch (error) {
     next(error);
   }
