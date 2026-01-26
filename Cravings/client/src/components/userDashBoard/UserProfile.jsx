@@ -1,14 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import EditProfileModal from "./modals/EditProfileModal";
 
 const UserProfile = () => {
   const [isEditProfileModalOpen, setIsEditProfileModalOpen] = useState(false);
+  const navigate = useNavigate();
   const { user } = useAuth();
+  
+  useEffect(() => {
+    if (!user) {
+      navigate("/login");
+    }
+  });
 
   return (
     <>
-      <div className="w-full p-6">
+      <div className="w-full p-6 ">
         {/* Profile Card */}
         <div className="bg-white rounded-2xl shadow-md border border-gray-200 p-8 max-w-5xl">
           {/* Header */}
@@ -36,7 +44,7 @@ const UserProfile = () => {
                 Full Name
               </p>
               <p className="text-lg font-medium text-gray-800 mt-1">
-                {user.fullName}
+                {user?.fullName}
               </p>
             </div>
 
@@ -45,7 +53,7 @@ const UserProfile = () => {
                 Email Address
               </p>
               <p className="text-lg font-medium text-gray-800 mt-1">
-                {user.email}
+                {user?.email}
               </p>
             </div>
 
@@ -54,7 +62,7 @@ const UserProfile = () => {
                 Mobile Number
               </p>
               <p className="text-lg font-medium text-gray-800 mt-1">
-                {user.mobileNumber}
+                {user?.mobileNumber}
               </p>
             </div>
           </div>
@@ -62,7 +70,7 @@ const UserProfile = () => {
       </div>
 
       {isEditProfileModalOpen && (
-        <EditProfileModal onclose={() => setIsEditProfileModalOpen(false)} /> 
+        <EditProfileModal onclose={() => setIsEditProfileModalOpen(false)} />
       )}
     </>
   );

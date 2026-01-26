@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import UserSideBar from "../../components/userDashboard/UserSideBar";
-import UserOverview from "../../components/userDashboard/userOverview";
-import UserProfile from "../../components/userDashboard/UserProfile";
-import UserOrders from "../../components/userDashboard/UserOrders";
-import UserTransactions from "../../components/userDashboard/userTransactions";
-import UserHelpDesk from "../../components/userDashboard/UserHelpDesk";
+import UserSideBar from "../../components/userDashBoard/UserSideBar";
+import UserOverview from "../../components/UserDashboard/UserOverview";
+import UserProfile from "../../components/UserDashboard/UserProfile";
+import UserOrders from "../../components/UserDashboard/UserOrders";
+import UserTransactions from "../../components/UserDashboard/UserTransactions";
+import UserHelpDesk from "../../components/UserDashboard/UserHelpDesk";
 
 const UserDashboard = () => {
   const [active, setActive] = useState("overview");

@@ -1,17 +1,15 @@
 import React, { useState } from "react";
 import toast from "react-hot-toast";
-import api from "../config/api";
+import Api from "../config/Api";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
     mobileNumber: "",
-   message:""
+    message: "",
   });
   const [isLoading, setIsLoading] = useState(false);
-
-  
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -23,20 +21,15 @@ const Contact = () => {
       fullName: "",
       email: "",
       mobileNumber: "",
-      message:""
+      message: "",
     });
   };
-
-  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
 
-   
-
     console.log(formData);
-    
 
     try {
       const res = await api.post("/public/new-contact", formData);
@@ -57,7 +50,7 @@ const Contact = () => {
           {/* Header */}
           <div className="text-center mb-8">
             <h1 className="text-4xl font-bold text-gray-900 mb-2">
-             Post Your Query
+              Post Your Query
             </h1>
             <p className="text-lg text-gray-600">
               You are 1 step away to stop your Cavings
@@ -84,7 +77,6 @@ const Contact = () => {
                       required
                       className="w-full h-fit px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 transition disabled:cursor-not-allowed"
                     />
-                    
                   </div>
                   <input
                     type="email"
