@@ -5,13 +5,13 @@ import { TiShoppingCart } from "react-icons/ti";
 import { TbTransactionRupee } from "react-icons/tb";
 import { RiCustomerService2Fill } from "react-icons/ri";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { IoIosLogOut } from "react-icons/io";
+import { MdLogout } from "react-icons/md";
 import api from "../../config/Api";
 import toast from "react-hot-toast";
 import { useAuth } from "../../context/AuthContext";
 
 const UserSideBar = ({ active, setActive, isCollapsed, setIsCollapsed }) => {
-  const { setUser } = useAuth();
+  const { setUser, setIsLogin } = useAuth();
 
   const menuItems = [
     { key: "overview", title: "OverView", icon: <TbChartTreemap /> },
@@ -30,23 +30,24 @@ const UserSideBar = ({ active, setActive, isCollapsed, setIsCollapsed }) => {
       const res = await api.get("/auth/logout");
       toast.success(res.data.message);
       setUser("");
+      setIsLogin(false);
       sessionStorage.removeItem("CravingUser");
     } catch (error) {
-      toast.error(error?.response?.data?.message);
+      toast.error(error?.response?.data?.message || "Unknown Error");
     }
   };
 
   return (
     <>
-      <div>
-        <div className="p-2">
+      <div className="p-2 flex flex-col justify-between h-full">
+        <div>
           <div className="h-10 text-xl font-bold flex gap-5 items-center mb-3">
             <button
               className="ms-2 hover:scale-105"
               onClick={() => setIsCollapsed(!isCollapsed)}
             >
               <GiHamburgerMenu />
-            </button>
+            </button>{" "}
             {!isCollapsed && (
               <span className="overflow-hidden text-nowrap">
                 User Dashboard
@@ -68,22 +69,24 @@ const UserSideBar = ({ active, setActive, isCollapsed, setIsCollapsed }) => {
                 onClick={() => setActive(item.key)}
                 key={idx}
               >
+                {" "}
                 {item.icon}
                 {!isCollapsed && item.title}
               </button>
             ))}
           </div>
         </div>
-      </div>
 
-      <div>
-        <button
-          className="flex gap-3 items-center text-lg ps-2 rounded-xl h-10 w-full text-nowrap overflow-hidden duration-300 hover:bg-red-500 hover:text-white text-red-500"
-          onClick={handleLogout}
-        >
-          <IoIosLogOut />
-          {!isCollapsed && "Logout"}
-        </button>
+        <div>
+          <button
+            className="flex gap-3 items-center text-lg ps-2 rounded-xl h-10 w-full text-nowrap overflow-hidden duration-300 hover:bg-red-500 hover:text-white text-red-600"
+            onClick={handleLogout}
+          >
+            {" "}
+            <MdLogout />
+            {!isCollapsed && "Logout"}
+          </button>
+        </div>
       </div>
     </>
   );

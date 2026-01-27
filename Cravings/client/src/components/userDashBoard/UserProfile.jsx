@@ -1,76 +1,97 @@
-import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 import { useAuth } from "../../context/AuthContext";
 import EditProfileModal from "./modals/EditProfileModal";
+import UserImage from "../../assets/userImage.jpg";
+import { FaCamera } from "react-icons/fa";
+import api from "../../config/Api";
+import toast from "react-hot-toast";
 
 const UserProfile = () => {
-  const [isEditProfileModalOpen, setIsEditProfileModalOpen] = useState(false);
-  const navigate = useNavigate();
   const { user } = useAuth();
-  
-  useEffect(() => {
-    if (!user) {
-      navigate("/login");
+  const [isEditProfileModalOpen, setIsEditProfileModalOpen] = useState(false);
+  const [preview, setPreview] = useState("");
+  const [photo, setPhoto] = useState("");
+
+  const changePhoto = async () => {
+    const form_Data = new FormData();
+
+    form_Data.append("image", photo);
+    form_Data.append("imageURL", preview);
+
+    try {
+      const res = await api.patch("/user/changePhoto", form_Data);
+
+      toast.success(res.data.message);
+    } catch (error) {
+      toast.error(error?.response?.data?.message || "Unknown Error");
     }
-  });
+  };
+
+  const handlePhotoChange = (e) => {
+    const file = e.target.files[0];
+    const newPhotoURL = URL.createObjectURL(file);
+    //console.log(newPhotoURL);
+    setPreview(newPhotoURL);
+    setTimeout(() => {
+      setPhoto(file);
+      changePhoto();
+    }, 5000);
+  };
 
   return (
     <>
-      <div className="w-full p-6 ">
-        {/* Profile Card */}
-        <div className="bg-white rounded-2xl shadow-md border border-gray-200 p-8 max-w-5xl">
-          {/* Header */}
-          <div className="flex justify-between items-center border-b pb-4 mb-6">
+      <div className="bg-(--color-primary)/10 rounded-lg shadow-md p-6 md:p-8 h-full">
+        <div className="flex justify-between border p-3 rounded-3xl items-center border-gray-300 bg-white">
+          <div className="flex gap-5 items-center">
+            <div className="relative">
+              <div className=" border rounded-full w-36 h-36 overflow-hidden">
+                <img
+                  src={preview || user.photo.url || UserImage}
+                  alt=""
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="absolute bottom-2 left-[75%] border bg-white p-2 rounded-full group flex gap-3">
+                <label
+                  htmlFor="imageUpload"
+                  className="text-(--color-primary) group-hover:text-(--color-secondary)"
+                >
+                  <FaCamera />
+                </label>
+                <input
+                  type="file"
+                  id="imageUpload"
+                  className="hidden"
+                  accept="image/*"
+                  onChange={handlePhotoChange}
+                />
+              </div>
+            </div>
             <div>
-              <h2 className="text-2xl font-semibold text-gray-800">
-                User Profile
-              </h2>
-              <p className="text-sm text-gray-500">
-                Manage your personal information
-              </p>
+              <div className="text-3xl text-(--color-primary) font-bold">
+                {user.fullName}
+              </div>
+              <div className="text-gray-600 text-lg font-semibold">
+                {user.email}
+              </div>
+              <div className="text-gray-600 text-lg font-semibold">
+                {user.mobileNumber}
+              </div>
             </div>
-            <button
-              className="bg-amber-400 hover:bg-amber-500 text-black font-medium px-6 py-2 rounded-lg shadow-sm transition"
-              onClick={() => setIsEditProfileModalOpen(true)}
-            >
-              Edit Profile
-            </button>
           </div>
-
-          {/* Info Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-gray-50 border rounded-xl p-5">
-              <p className="text-xs text-gray-500 uppercase tracking-wide">
-                Full Name
-              </p>
-              <p className="text-lg font-medium text-gray-800 mt-1">
-                {user?.fullName}
-              </p>
-            </div>
-
-            <div className="bg-gray-50 border rounded-xl p-5">
-              <p className="text-xs text-gray-500 uppercase tracking-wide">
-                Email Address
-              </p>
-              <p className="text-lg font-medium text-gray-800 mt-1">
-                {user?.email}
-              </p>
-            </div>
-
-            <div className="bg-gray-50 border rounded-xl p-5">
-              <p className="text-xs text-gray-500 uppercase tracking-wide">
-                Mobile Number
-              </p>
-              <p className="text-lg font-medium text-gray-800 mt-1">
-                {user?.mobileNumber}
-              </p>
-            </div>
+          <div className="flex flex-col gap-2">
+            <button className="px-4 py-2 rounded bg-(--color-secondary) text-white hover:grey-800">
+              Edit
+            </button>
+            <button className="px-4 py-2 rounded bg-(--color-secondary) text-white hover:grey-800">
+              Reset Password
+            </button>
           </div>
         </div>
       </div>
 
       {isEditProfileModalOpen && (
-        <EditProfileModal onclose={() => setIsEditProfileModalOpen(false)} />
+        <EditProfileModal onClose={() => setIsEditProfileModalOpen(false)} />
       )}
     </>
   );

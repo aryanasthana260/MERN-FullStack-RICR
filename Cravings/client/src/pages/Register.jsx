@@ -74,6 +74,7 @@ const Register = () => {
     }
 
     console.log(formData);
+
     try {
       const res = await api.post("/auth/register", formData);
       toast.success(res.data.message);
@@ -122,7 +123,7 @@ const Register = () => {
                           value={"manager"}
                           onChange={handleChange}
                         />
-                        <label htmlFor="manager">Restaurant Manager</label>
+                        <label htmlFor="manager">Resturant Manager</label>
                       </div>
                       <div className="flex items-center gap-2">
                         <input
