@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+
 const contactSchema = mongoose.Schema(
   {
     fullName: {
@@ -22,4 +23,5 @@ const contactSchema = mongoose.Schema(
 );
 
 const Contact = mongoose.model("Contact", contactSchema);
+
 export default Contact;
