@@ -37,7 +37,7 @@ const Header = () => {
           <img
             src={tranparentLogo}
             alt=""
-            className="h-12 w-20 object-cover invert-100 animate-bounce"
+            className="h-12 w-20 object-cover invert-100"
           />
         </Link>
         <div className="flex gap-4">
@@ -58,6 +58,12 @@ const Header = () => {
             className="text-decoration-none text-white hover:text-(--color-accent)"
           >
             Contact
+          </Link>
+          <Link
+            to={"/orderNowCopy"}
+            className="text-decoration-none text-white hover:text-(--color-accent)"
+          >
+            Order Now
           </Link>
         </div>
         <div className="flex gap-4">

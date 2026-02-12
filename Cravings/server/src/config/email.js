@@ -1,6 +1,6 @@
 import nodemailer from "nodemailer";
-// import dotenv from "dotenv";
-// dotenv.config();
+import dotenv from "dotenv";
+dotenv.config();
 
 const sendEmail = async (to, subject, message) => {
   try {
@@ -10,7 +10,7 @@ const sendEmail = async (to, subject, message) => {
       service: "gmail",
       auth: {
         user: process.env.GMAIL_USER,
-        pass: process.env.GMAIL_PASSCODE,
+        pass: process.env.GMAIL_PASS,
       },
     });
 
@@ -35,7 +35,7 @@ const sendEmail = async (to, subject, message) => {
 export default sendEmail;
 
 // sendEmail(
-//   "rajvardhan@ricr.in",
+//   "aryanasthana260@gmail.com",
 //   "test Email",
 //   "<p style='color:red;'> Test Message</p>",
 // );
