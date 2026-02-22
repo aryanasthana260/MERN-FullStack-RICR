@@ -8,7 +8,8 @@ import {
   RestaurantUpdate,
   RestaurantChangePhoto,
   RestaurantResetPassword,
-} from "../controllers/restaurantControllers.js";
+  GetAllPlacedOrder,
+} from "../controllers/restaurantController.js";
 import { ManagerProtect, Protect } from "../middlewares/authMiddleware.js";
 
 const router = express.Router();
@@ -45,5 +46,7 @@ router.patch(
   ManagerProtect,
   RestaurantResetPassword,
 );
+
+router.get("/placedOrders", Protect, ManagerProtect, GetAllPlacedOrder);
 
 export default router;

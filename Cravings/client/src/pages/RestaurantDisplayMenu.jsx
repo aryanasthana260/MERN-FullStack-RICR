@@ -200,7 +200,7 @@ const RestaurantDisplayMenu = () => {
           </div>
         </div>
       )}
-    </>
+    </> 
   );
 };
 
