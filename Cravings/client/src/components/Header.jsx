@@ -18,7 +18,7 @@ const Header = () => {
         break;
       }
       case "customer": {
-        navigate("/user-dashboard");
+        navigate("/user-dashboard", { state: { tab: "overview" } });
         break;
       }
       case "admin": {
@@ -58,12 +58,6 @@ const Header = () => {
             className="text-decoration-none text-white hover:text-(--color-accent)"
           >
             Contact
-          </Link>
-          <Link
-            to={"/orderNowCopy"}
-            className="text-decoration-none text-white hover:text-(--color-accent)"
-          >
-            Order Now
           </Link>
         </div>
         <div className="flex gap-4">
