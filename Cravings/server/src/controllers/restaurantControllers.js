@@ -56,6 +56,7 @@ export const RestaurantAddMenuItem = async (req, res, next) => {
     next(error);
   }
 };
+
 export const RestaurantEditMenuItem = async (req, res, next) => {
   try {
     const {
@@ -400,10 +401,12 @@ export const RestaurantOrderStatusUpdate = async (req, res, next) => {
     existingOrder.status = NewStatus;
     await existingOrder.save();
 
-    res.status(200).json({
-      message: "Order Status Updated Successfully",
-      data: existingOrder,
-    });
+    res
+      .status(200)
+      .json({
+        message: "Order Status Updated Successfully",
+        data: existingOrder,
+      });
   } catch (error) {
     next(error);
   }

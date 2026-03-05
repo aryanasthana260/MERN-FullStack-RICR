@@ -2,7 +2,7 @@ import dotenv from "dotenv";
 dotenv.config();
 import connectDB from "../config/db.js";
 import User from "../models/userModel.js";
-import bcrypt from "bcrypt";
+import bcrypt, { genSalt } from "bcrypt";
 import { DummyManagers, DummyPartners, DummyUsers } from "./dummy.js";
 
 const seedManager = async () => {
@@ -79,7 +79,7 @@ const seedUser = async () => {
     console.log("Error in adding Dummy User");
   }
 
-  process.exit(0);
+  process.exit(1);
 };
 
 seedUser();

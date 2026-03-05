@@ -9,8 +9,8 @@ import {
   RestaurantChangePhoto,
   RestaurantResetPassword,
   GetAllPlacedOrder,
-  RestaurantOrderStatusUpdate,
-} from "../controllers/restaurantController.js";
+  RestaurantOrderStatusUpdate
+} from "../controllers/restaurantControllers.js";
 import { ManagerProtect, Protect } from "../middlewares/authMiddleware.js";
 
 const router = express.Router();
