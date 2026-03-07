@@ -9,10 +9,10 @@ import Chating from "./pages/Chating";
 
 const App = () => {
   return (
-    <>
+    <>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
       <BrowserRouter>
         <Toaster />
-        <Navbar />
+        <Navbar />   
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
